@@ -3,9 +3,97 @@
    Theme: Burgundy Minimalism
    ============================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Space+Mono:wght@400;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap');
+/* --- Self-Hosted Fonts --- */
+
+/* Nunito Sans — 300 (Light) */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nunito Sans — 400 (Regular) */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nunito Sans — 500 (Medium) */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Nunito Sans — 700 (Bold) */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Instrument Serif — 400 (Regular) */
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('assets/fonts/instrument-serif-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Space Mono — 400 (Regular) */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('assets/fonts/space-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Space Mono — 700 (Bold) */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('assets/fonts/space-mono-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Crimson Pro — 400 (Regular) */
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('assets/fonts/crimson-pro-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Crimson Pro — 600 (Semi-Bold) */
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('assets/fonts/crimson-pro-latin.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Crimson Pro — 400 Italic */
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('assets/fonts/crimson-pro-italic-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 /* ============================================
    Part 1A — Color Palette & Variables
