@@ -85,20 +85,41 @@
       Of a truth, the work I am most passionate about cannot fit neatly into 
       a portfolio card. Projects, programs, and ideas, commonwealth-powered, all built to move the 
       needle on the problems that matter.
-    </p><br><br>
+    </p><br>
       
     <p>
-      Although maturity is not instant, the compounding impact is undeniable.
+      Although maturity is not instant, the compounding impact is undeniable. 
     </p>
   </section>
 
-  <!-- Coming Soon Content -->
-  <main class="coming-soon">
-    <div class="coming-soon__actions">
-      <a href="/contact" class="btn-primary">Get in Touch</a>
-      <a href="https://linkedin.com/in/thechibuzornwachukwu" target="_blank" rel="noopener" class="btn-outline">Connect on LinkedIn</a>
-    </div>
-  </main>
+  <section class="initiatives-notify">
+    <p>
+      Want to hear about updates early?
+    </p>
+    <form class="initiatives-notify__form" action="https://formspree.io/f/mnjbvvra" method="POST">
+      <input type="hidden" name="_subject" value="Initiatives - New Interest Signup">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-group">
+        <label for="notify-name">Name</label>
+        <input type="text" id="notify-name" name="name" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="notify-email">Email</label>
+        <input type="email" id="notify-email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="notify-interest">What interests you most?</label>
+        <select id="notify-interest" name="interest">
+          <option value="" disabled selected>Select an option</option>
+          <option value="AI Safety">AI Safety</option>
+          <option value="Education">Education</option>
+          <option value="Community">Community</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <button type="submit" class="initiatives-notify__btn">Notify Me</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -116,8 +137,10 @@
       </div>
       <div class="footer-right">
         <span class="footer-newsletter-label">Newsletter</span>
-        <form class="footer-newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/mbdayyqn" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <input type="hidden" name="_subject" value="New Newsletter Subscriber">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit">Subscribe</button>
         </form>
       </div>

@@ -185,4 +185,96 @@
       closeAllDesktopDropdowns();
     }
   });
+
+  // ========================================
+  // Newsletter Form Submission
+  // ========================================
+
+  var newsletterForm = document.querySelector('.footer-newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var form = e.target;
+      var button = form.querySelector('button[type="submit"]');
+      var originalText = button.textContent;
+
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.reset();
+            button.textContent = 'Subscribed!';
+            button.classList.add('newsletter-success');
+            setTimeout(function () {
+              button.textContent = originalText;
+              button.disabled = false;
+              button.classList.remove('newsletter-success');
+            }, 3000);
+          } else {
+            throw new Error('Submission failed');
+          }
+        })
+        .catch(function () {
+          button.textContent = 'Error – retry';
+          button.classList.add('newsletter-error');
+          setTimeout(function () {
+            button.textContent = originalText;
+            button.disabled = false;
+            button.classList.remove('newsletter-error');
+          }, 3000);
+        });
+    });
+  }
+
+  // ========================================
+  // Initiatives Notify Me Form Submission
+  // ========================================
+
+  var notifyForm = document.querySelector('.initiatives-notify__form');
+  if (notifyForm) {
+    notifyForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var form = e.target;
+      var button = form.querySelector('button[type="submit"]');
+      var originalText = button.textContent;
+
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            var section = form.closest('.initiatives-notify');
+            form.remove();
+            var msg = document.createElement('p');
+            msg.className = 'initiatives-notify__confirmation';
+            msg.textContent = "You\u2019re on the list! We\u2019ll reach out when there\u2019s an update.";
+            section.appendChild(msg);
+          } else {
+            throw new Error('Submission failed');
+          }
+        })
+        .catch(function () {
+          button.textContent = 'Error \u2013 retry';
+          button.classList.add('notify-error');
+          setTimeout(function () {
+            button.textContent = originalText;
+            button.disabled = false;
+            button.classList.remove('notify-error');
+          }, 3000);
+        });
+    });
+  }
 })();

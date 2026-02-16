@@ -288,8 +288,10 @@
       </div>
       <div class="footer-right">
         <span class="footer-newsletter-label">Newsletter</span>
-        <form class="footer-newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/mbdayyqn" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <input type="hidden" name="_subject" value="New Newsletter Subscriber">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit">Subscribe</button>
         </form>
       </div>

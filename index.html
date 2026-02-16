@@ -317,9 +317,9 @@
   <section class="Insights-preview" id="Insights">
     <h2>The Library</h2>
     <ul class="Insights-list">
-      <li>Sadly, Netflix is an Echo Chamber</li>
-      <li>I Finally Found Proof That AI is Biased</li>
-      <li>Plants Can Cry? (And Other Data Oddities)</li>
+      <li><a href="/insights/netflix-echo-chamber">Sadly, Netflix is an Echo Chamber</a></li>
+      <li><a href="/insights/ai-bias-proof">I Finally Found Proof That AI is Biased</a></li>
+      <li><a href="/insights/plants-can-cry">Plants Can Cry? (And Other Data Oddities)</a></li>
     </ul>
     <a href="/insights" class="link-arrow">Browse the library</a>
   </section>
@@ -347,8 +347,10 @@
       </div>
       <div class="footer-right">
         <span class="footer-newsletter-label">Newsletter</span>
-        <form class="footer-newsletter-form" action="#" method="post">
-          <input type="email" placeholder="Enter your email" required>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/mbdayyqn" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <input type="hidden" name="_subject" value="New Newsletter Subscriber">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit">Subscribe</button>
         </form>
       </div>
