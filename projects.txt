@@ -220,8 +220,8 @@ A fun-sized project I worked on to appreciate Fathers in all capacity in this ye
 
 The data used in the report is from survey results collated by The National Retail Foundation (NRF) on spending patterns and volumes on the holiday
 A fun-sized project I worked on to appreciate Fathers in all capacity in this year’s Father’s Day. The data used in the report is from survey results collated by The National Retail Foundation (NRF) on spending patterns and volumes on the holiday
-Skills: Writing · Web Scraping · Microsoft Excel · Data Analytics · Oral Communication · Microsoft Power BI
-Skills: Writing · Web Scraping · Microsoft Excel · Data Analytics · Oral Communication · Microsoft Power BI
+Skills: Insights · Web Scraping · Microsoft Excel · Data Analytics · Oral Communication · Microsoft Power BI
+Skills: Insights · Web Scraping · Microsoft Excel · Data Analytics · Oral Communication · Microsoft Power BI
 
 Father’s Day History and InsightsFather’s Day History and Insights
 A little back story on Father’s Day, it’s significance and spending volume over the past 17 years+A little back story on Father’s Day, it’s significance and spending volume over the past 17 years+
@@ -350,8 +350,8 @@ In this project, I created content to present in the UNILAG Data Science School 
 - Key insights drawn 
 - ZOOM presentations for Statistics Without Borders
 In this project, I created content to present in the UNILAG Data Science School in August. The topics I covered in my presentation included - Introduction to Data Visualization - Types and use-cases of plots - Key insights drawn - ZOOM presentations for Statistics Without Borders
-Skills: Data Visualization · Writing · Data Analytics · Data Analysis · Python (Programming Language)
-Skills: Data Visualization · Writing · Data Analytics · Data Analysis · Python (Programming Language)
+Skills: Data Visualization · Insights · Data Analytics · Data Analysis · Python (Programming Language)
+Skills: Data Visualization · Insights · Data Analytics · Data Analysis · Python (Programming Language)
 
 Certificate presented for Project 226Certificate presented for Project 226
 Other contributorsOther contributors

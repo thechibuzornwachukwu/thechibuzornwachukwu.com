@@ -1677,14 +1677,14 @@ body.menu-open {
 .evidence__testimonial-text { font-family: var(--font-body-serif); font-size: 16px; font-style: italic; line-height: 1.7; color: var(--color-text); margin-bottom: 16px; }
 .evidence__testimonial-cite { font-family: var(--font-mono); font-size: 10px; font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-secondary); display: block; }
 
-/* Writing Preview (Homepage Condensed) */
-.writing-preview {
+/* Insights Preview (Homepage Condensed) */
+.Insights-preview {
   padding: 100px 100px 0px;
   background: #fff;
   text-align: center;
 }
 
-.writing-preview h2 {
+.Insights-preview h2 {
   font-family: var(--font-display);
   font-size: 48px;
   font-weight: 400;
@@ -1692,14 +1692,14 @@ body.menu-open {
   margin-bottom: 40px;
 }
 
-.writing-list {
+.Insights-list {
   list-style: none;
   padding: 0;
   margin: 0 auto 40px;
   max-width: 600px;
 }
 
-.writing-list li {
+.Insights-list li {
   font-family: var(--font-body-serif);
   font-size: 20px;
   color: var(--color-heading);
@@ -1707,7 +1707,7 @@ body.menu-open {
   border-bottom: 1px solid var(--color-border);
 }
 
-.writing-list li:first-child {
+.Insights-list li:first-child {
   border-top: 1px solid var(--color-border);
 }
 
@@ -2669,18 +2669,18 @@ body.menu-open {
   color: var(--color-heading);
 }
 
-/* ----- WRITING PAGE ----- */
+/* ----- Insights PAGE ----- */
 
-.writing {
+.Insights {
   padding: 100px 60px;
 }
 
-.writing h2 {
+.Insights h2 {
   text-align: center;
   margin-bottom: 60px;
 }
 
-.writing-grid {
+.Insights-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -2688,23 +2688,23 @@ body.menu-open {
   margin: 0 auto;
 }
 
-.writing-card {
+.Insights-card {
   border: 1px solid var(--color-border);
   border-radius: 4px;
   padding: 32px;
   transition: border-color 0.3s ease;
 }
 
-.writing-card:hover {
+.Insights-card:hover {
   border-color: var(--color-primary);
 }
 
-.writing-card h3 {
+.Insights-card h3 {
   font-size: 20px;
   margin-bottom: 12px;
 }
 
-.writing-card p {
+.Insights-card p {
   font-size: 15px;
   color: var(--color-muted);
   margin-bottom: 16px;
@@ -2721,7 +2721,7 @@ body.menu-open {
   color: var(--color-accent);
 }
 
-/* Article Card Full (full-width writing list) */
+/* Article Card Full (full-width Insights list) */
 .article-card-full {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -3351,16 +3351,16 @@ body.menu-open {
     margin-top: 40px;
   }
 
-  /* Writing Preview */
-  .writing-preview {
+  /* Insights Preview */
+  .Insights-preview {
     padding: 80px 24px;
   }
 
-  .writing-preview h2 {
+  .Insights-preview h2 {
     font-size: 36px;
   }
 
-  .writing-list li {
+  .Insights-list li {
     font-size: 18px;
   }
 
@@ -3594,12 +3594,12 @@ body.menu-open {
     font-size: 36px;
   }
 
-  /* Writing */
-  .writing {
+  /* Insights */
+  .Insights {
     padding: 80px 24px;
   }
 
-  .writing-grid {
+  .Insights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -3940,13 +3940,13 @@ body.menu-open {
 
   /* Preview sections */
   .about-preview,
-  .writing-preview,
+  .Insights-preview,
   .contact-preview {
     padding: 60px 16px;
   }
 
   .about-preview h2,
-  .writing-preview h2,
+  .Insights-preview h2,
   .contact-preview h2 {
     font-size: 32px;
   }
@@ -4073,10 +4073,10 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 5 — Writing Page (Full)
+   Part 5 — Insights Page (Full)
    ============================================ */
 
-.writing-full {
+.Insights-full {
   padding: 0 60px 100px;
   max-width: 800px;
   margin: 0 auto;
@@ -4500,12 +4500,12 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 5 — Responsive for Writing & Contact
+   Part 5 — Responsive for Insights & Contact
    ============================================ */
 
 @media (max-width: 768px) {
-  /* Writing Page */
-  .writing-full {
+  /* Insights Page */
+  .Insights-full {
     padding: 0 24px 80px;
   }
 
@@ -4546,7 +4546,7 @@ body.menu-open {
 }
 
 @media (max-width: 480px) {
-  .writing-full {
+  .Insights-full {
     padding: 0 16px 60px;
   }
 
