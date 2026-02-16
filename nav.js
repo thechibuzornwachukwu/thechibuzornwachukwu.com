@@ -4,6 +4,52 @@
   var overlay = document.querySelector('.mobile-menu-overlay');
   var savedScrollY = 0;
 
+  // ========================================
+  // Utility Functions
+  // ========================================
+
+  /**
+   * Sets aria-expanded attribute on an element
+   * @param {HTMLElement} element - The element to update
+   * @param {boolean} isExpanded - Whether the element is expanded
+   */
+  function setAriaExpanded(element, isExpanded) {
+    if (element) {
+      element.setAttribute('aria-expanded', String(isExpanded));
+    }
+  }
+
+  /**
+   * Closes all dropdown elements matching a selector within a container
+   * @param {string} selector - CSS selector for dropdown elements
+   * @param {HTMLElement} container - Container element to search within
+   */
+  function closeAllDropdowns(selector, container) {
+    container.querySelectorAll(selector).forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      var trigger = dropdown.querySelector('.mobile-dropdown-trigger') || dropdown.querySelector('.dropdown-trigger');
+      setAriaExpanded(trigger, false);
+    });
+  }
+
+  /**
+   * Locks body scroll and saves current scroll position
+   */
+  function lockBodyScroll() {
+    savedScrollY = window.scrollY;
+    document.body.style.top = '-' + savedScrollY + 'px';
+    document.body.classList.add('menu-open');
+  }
+
+  /**
+   * Unlocks body scroll and restores scroll position
+   */
+  function unlockBodyScroll() {
+    document.body.classList.remove('menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, savedScrollY);
+  }
+
   // --- Scroll: add .scrolled to navbar ---
   window.addEventListener('scroll', function () {
     nav.classList.toggle('scrolled', window.scrollY > 40);
@@ -11,26 +57,19 @@
 
   // --- Mobile menu open/close ---
   function openMenu() {
-    savedScrollY = window.scrollY;
-    document.body.style.top = '-' + savedScrollY + 'px';
-    document.body.classList.add('menu-open');
+    lockBodyScroll();
     toggle.classList.add('active');
     overlay.classList.add('open');
-    toggle.setAttribute('aria-expanded', 'true');
+    setAriaExpanded(toggle, true);
   }
 
   function closeMenu() {
     toggle.classList.remove('active');
     overlay.classList.remove('open');
-    document.body.classList.remove('menu-open');
-    document.body.style.top = '';
-    window.scrollTo(0, savedScrollY);
-    toggle.setAttribute('aria-expanded', 'false');
+    unlockBodyScroll();
+    setAriaExpanded(toggle, false);
     // Close all mobile submenus
-    overlay.querySelectorAll('.mobile-dropdown.open').forEach(function (d) {
-      d.classList.remove('open');
-      d.querySelector('.mobile-dropdown-trigger').setAttribute('aria-expanded', 'false');
-    });
+    closeAllDropdowns('.mobile-dropdown.open', overlay);
   }
 
   toggle.addEventListener('click', function () {
@@ -67,15 +106,16 @@
       var isOpen = parent.classList.contains('open');
 
       // Accordion: close others
-      overlay.querySelectorAll('.mobile-dropdown.open').forEach(function (d) {
-        if (d !== parent) {
-          d.classList.remove('open');
-          d.querySelector('.mobile-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      overlay.querySelectorAll('.mobile-dropdown.open').forEach(function (dropdown) {
+        if (dropdown !== parent) {
+          dropdown.classList.remove('open');
+          var trigger = dropdown.querySelector('.mobile-dropdown-trigger');
+          setAriaExpanded(trigger, false);
         }
       });
 
       parent.classList.toggle('open', !isOpen);
-      btn.setAttribute('aria-expanded', String(!isOpen));
+      setAriaExpanded(btn, !isOpen);
     });
   });
 
@@ -83,35 +123,35 @@
   var desktopDropdowns = nav.querySelectorAll('.nav-item--has-dropdown');
 
   function closeAllDesktopDropdowns() {
-    desktopDropdowns.forEach(function (dd) {
-      dd.classList.remove('open');
-      var trigger = dd.querySelector('.dropdown-trigger');
-      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    desktopDropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove('open');
+      var trigger = dropdown.querySelector('.dropdown-trigger');
+      setAriaExpanded(trigger, false);
     });
   }
 
-  desktopDropdowns.forEach(function (dd) {
-    var trigger = dd.querySelector('.dropdown-trigger');
-    var menu = dd.querySelector('.dropdown-menu');
+  desktopDropdowns.forEach(function (dropdown) {
+    var trigger = dropdown.querySelector('.dropdown-trigger');
+    var menu = dropdown.querySelector('.dropdown-menu');
 
-    dd.addEventListener('mouseenter', function () {
+    dropdown.addEventListener('mouseenter', function () {
       closeAllDesktopDropdowns();
-      dd.classList.add('open');
-      if (trigger) trigger.setAttribute('aria-expanded', 'true');
+      dropdown.classList.add('open');
+      setAriaExpanded(trigger, true);
     });
 
-    dd.addEventListener('mouseleave', function () {
-      dd.classList.remove('open');
-      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    dropdown.addEventListener('mouseleave', function () {
+      dropdown.classList.remove('open');
+      setAriaExpanded(trigger, false);
     });
 
     // Keyboard navigation
     if (trigger) {
       trigger.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowDown' || (e.key === 'Enter' && !dd.classList.contains('open'))) {
+        if (e.key === 'ArrowDown' || (e.key === 'Enter' && !dropdown.classList.contains('open'))) {
           e.preventDefault();
-          dd.classList.add('open');
-          trigger.setAttribute('aria-expanded', 'true');
+          dropdown.classList.add('open');
+          setAriaExpanded(trigger, true);
           var firstItem = menu.querySelector('a');
           if (firstItem) firstItem.focus();
         }
@@ -130,8 +170,8 @@
             if (i - 1 >= 0) items[i - 1].focus();
             else trigger.focus();
           } else if (e.key === 'Escape') {
-            dd.classList.remove('open');
-            trigger.setAttribute('aria-expanded', 'false');
+            dropdown.classList.remove('open');
+            setAriaExpanded(trigger, false);
             trigger.focus();
           }
         });

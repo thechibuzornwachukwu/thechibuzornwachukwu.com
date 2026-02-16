@@ -5,6 +5,24 @@
   var isConvocation = document.querySelector('.gallery-grid[data-gallery="convocation"]') !== null;
   var currentIndex = 0;
 
+  // ========================================
+  // Utility Functions
+  // ========================================
+
+  /**
+   * Locks body scroll for lightbox
+   */
+  function lockBodyScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  /**
+   * Unlocks body scroll when lightbox closes
+   */
+  function unlockBodyScroll() {
+    document.body.style.overflow = '';
+  }
+
   // --- Build lightbox DOM ---
   var lightbox = document.createElement('div');
   lightbox.className = 'gallery-lightbox';
@@ -62,13 +80,13 @@
   function openLightbox(index) {
     showImage(index);
     lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    lockBodyScroll();
     closeBtn.focus();
   }
 
   function closeLightbox() {
     lightbox.classList.remove('active');
-    document.body.style.overflow = '';
+    unlockBodyScroll();
   }
 
   function prevImage() {

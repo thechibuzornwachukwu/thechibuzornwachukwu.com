@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Chibuzor Nwachukwu</title>
+  <title>Portfolio | Chibuzor Nwachukwu</title>
   <meta name="description" content="Case studies and project evidence from Chibuzor Nwachukwu — Computer Vision, AI Safety, and Data Analytics work.">
-  <meta property="og:title" content="Projects | Chibuzor Nwachukwu">
+  <meta property="og:title" content="Portfolio | Chibuzor Nwachukwu">
   <meta property="og:description" content="The Evidence: Case studies in Computer Vision, AI Safety, and Data Analytics.">
-  <meta property="og:url" content="https://thechibuzornwachukwu.com/projects">
+  <meta property="og:url" content="https://thechibuzornwachukwu.com/portfolio">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects | Chibuzor Nwachukwu">
+  <meta name="twitter:title" content="Portfolio | Chibuzor Nwachukwu">
   <meta name="twitter:description" content="The Evidence: Case studies in Computer Vision, AI Safety, and Data Analytics.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -39,30 +39,38 @@
 
   <!-- Main Nav -->
   <nav class="site-nav">
-    <a href="index.html" class="nav-logo">Chibuzor Nwachukwu</a>
+    <a href="/" class="nav-logo">Chibuzor Nwachukwu</a>
     <div class="nav-links">
-      
-      <a href="index.html">Home</a>
+
+      <a href="/">Home</a>
       <div class="nav-item--has-dropdown">
-        <a href="about.html" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">About <span class="dropdown-arrow"></span></a>
+        <a href="/about" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">About <span class="dropdown-arrow"></span></a>
         <div class="dropdown-menu" role="menu">
-          <a href="about.html" role="menuitem">My Story</a>
-          <a href="about.html#speaking" role="menuitem">Speaker</a>
-          <a href="about.html#experience" role="menuitem">Consultant</a>
+          <a href="/about" role="menuitem">My Story</a>
+          <a href="/about#speaking" role="menuitem">Speaker</a>
+          <a href="/about#experience" role="menuitem">Consultant</a>
         </div>
       </div>
-      <a href="projects.html" class="active">Projects</a>
+      <a href="/portfolio" class="active">Portfolio</a>
       <div class="nav-item--has-dropdown">
-        <a href="writing.html" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow"></span></a>
+        <a href="/gallery/convocation" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">Gallery <span class="dropdown-arrow"></span></a>
         <div class="dropdown-menu" role="menu">
-          <a href="writing.html" role="menuitem">Writing</a>
+          <a href="/gallery/convocation" role="menuitem">Convocation</a>
+          <a href="/gallery/events" role="menuitem">Events</a>
+          <a href="/gallery/honors" role="menuitem">Honors</a>
+        </div>
+      </div>
+      <div class="nav-item--has-dropdown">
+        <a href="/writing" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow"></span></a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/writing" role="menuitem">Writing</a>
           <a href="#" role="menuitem">Podcasts</a>
           <a href="#" role="menuitem">Resource Library</a>
         </div>
       </div>
-      <a href="contact.html">Contact</a>
+      <a href="/contact">Contact</a>
     </div>
-    <a href="contact.html" class="nav-cta">Work With Chibuzor</a>
+    <a href="/contact" class="nav-cta">Work With Chibuzor</a>
     <button class="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -74,30 +82,85 @@
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" aria-expanded="false">About <span class="dropdown-arrow"></span></button>
         <div class="mobile-submenu">
-          <a href="about.html">My Story</a>
-          <a href="about.html#speaking">Speaker</a>
-          <a href="about.html#experience">Consultant</a>
+          <a href="/about">My Story</a>
+          <a href="/about#speaking">Speaker</a>
+          <a href="/about#experience">Consultant</a>
         </div>
       </div>
-      <a href="projects.html">Projects</a>
+      <a href="/portfolio">Portfolio</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" aria-expanded="false">Gallery <span class="dropdown-arrow"></span></button>
+        <div class="mobile-submenu">
+          <a href="/gallery/convocation">Convocation</a>
+          <a href="/gallery/events">Events</a>
+          <a href="/gallery/honors">Honors</a>
+        </div>
+      </div>
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" aria-expanded="false">Resources <span class="dropdown-arrow"></span></button>
         <div class="mobile-submenu">
-          <a href="writing.html">Writing</a>
+          <a href="/writing">Writing</a>
           <a href="#">Podcasts</a>
           <a href="#">Resource Library</a>
         </div>
       </div>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta">Work With Chibuzor</a>
+      <a href="/contact">Contact</a>
+      <a href="/contact" class="nav-cta">Work With Chibuzor</a>
     </div>
   </div>
 
   <!-- Page Hero -->
   <section class="page-hero">
-    <span class="section-label">CASE FILES</span>
-    <h1>The Evidence</h1>
-    <p>Detailed case studies of problems identified, interventions engineered, and outcomes delivered.</p>
+    <span class="section-label">PORTFOLIO</span>
+    <h1>Selected Work</h1>
+    <p>Case studies showcasing AI, data science, and product innovations.</p>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-grid-section">
+    <div class="portfolio-grid">
+
+      <a href="#valor" class="portfolio-card portfolio-card--featured">
+        <div class="portfolio-card__image">
+          <img src="../assets/images/profile/chibuzor nwachukwu 8.webp"
+               alt="Valor - The Mango Master" loading="lazy">
+        </div>
+        <div class="portfolio-card__overlay"></div>
+        <div class="portfolio-card__content">
+          <span class="portfolio-card__category">Computer Vision / AgriTech</span>
+          <h3 class="portfolio-card__title">Valor (The Mango Master)</h3>
+          <p class="portfolio-card__brief">Making fruit spoilage visible before it becomes irreversible</p>
+          <span class="portfolio-card__badge">1st Place Winner</span>
+        </div>
+      </a>
+
+      <a href="#rag-safety" class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="../assets/images/profile/chibuzor nwachukwu 17.webp"
+               alt="Adversarial Attacks on RAG Systems" loading="lazy">
+        </div>
+        <div class="portfolio-card__overlay"></div>
+        <div class="portfolio-card__content">
+          <span class="portfolio-card__category">AI Safety / Research</span>
+          <h3 class="portfolio-card__title">Adversarial Attacks on RAG Systems</h3>
+          <p class="portfolio-card__brief">Testing security assumptions in RAG architectures</p>
+        </div>
+      </a>
+
+      <a href="#churn" class="portfolio-card">
+        <div class="portfolio-card__image">
+          <img src="../assets/images/profile/chibuzor nwachukwu 12.webp"
+               alt="The Churn Detective" loading="lazy">
+        </div>
+        <div class="portfolio-card__overlay"></div>
+        <div class="portfolio-card__content">
+          <span class="portfolio-card__category">Data Analytics</span>
+          <h3 class="portfolio-card__title">The Churn Detective</h3>
+          <p class="portfolio-card__brief">Identifying behavioral patterns predictive of customer churn</p>
+        </div>
+      </a>
+
+    </div>
   </section>
 
   <!-- Main Content -->
@@ -115,6 +178,12 @@
         </div>
       </div>
 
+      <!-- Hero Image -->
+      <div class="case-hero-image">
+        <img src="../assets/images/profile/chibuzor nwachukwu 8.webp"
+             alt="Valor project" loading="lazy">
+      </div>
+
       <div class="case-study-content">
         <div class="case-section">
           <h3>The Overlooked Problem</h3>
@@ -124,6 +193,21 @@
         <div class="case-section">
           <h3>The Intervention</h3>
           <p>Valor was built to make spoilage visible before it becomes irreversible. Working with a team of four, I led the AI development for a mobile-first computer vision system that could classify mango ripeness and detect early signs of spoilage.</p>
+
+          <!-- Optional: Project images -->
+          <div class="project-images">
+            <figure class="project-image">
+              <img src="../assets/images/profile/chibuzor nwachukwu 5.webp"
+                   alt="Dataset preparation" loading="lazy">
+              <figcaption>Curated dataset of 1,700+ mango images</figcaption>
+            </figure>
+            <figure class="project-image">
+              <img src="../assets/images/profile/chibuzor nwachukwu 15.webp"
+                   alt="Mobile app interface" loading="lazy">
+              <figcaption>Real-time classification on Android</figcaption>
+            </figure>
+          </div>
+
           <ul class="case-details">
             <li>Curated and labeled a dataset of 1,700+ mango images across multiple ripeness stages and spoilage conditions</li>
             <li>Designed and trained a lightweight CNN architecture optimized for edge deployment on mobile devices</li>
@@ -146,6 +230,12 @@
         <span class="project-tag">AI Safety / Research</span>
         <h2>Adversarial Attacks on RAG Systems</h2>
         <p class="case-thesis">"If you can't break it, you can't trust it."</p>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="case-hero-image">
+        <img src="../assets/images/profile/chibuzor nwachukwu 17.webp"
+             alt="Adversarial Attacks on RAG Systems" loading="lazy">
       </div>
 
       <div class="case-study-content">
@@ -182,6 +272,12 @@
         <p class="case-thesis">"Acquisition is vanity; Retention is sanity."</p>
       </div>
 
+      <!-- Hero Image -->
+      <div class="case-hero-image">
+        <img src="../assets/images/profile/chibuzor nwachukwu 12.webp"
+             alt="The Churn Detective" loading="lazy">
+      </div>
+
       <div class="case-study-content">
         <div class="case-section">
           <h3>The Overlooked Problem</h3>
@@ -213,13 +309,13 @@
   <footer class="site-footer">
     <div class="footer-main">
       <div class="footer-left">
-        <a href="index.html" class="footer-logo">Chibuzor Nwachukwu</a>
+        <a href="/" class="footer-logo">Chibuzor Nwachukwu</a>
         <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="writing.html">Writing</a>
-          <a href="contact.html">Contact</a>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/writing">Writing</a>
+          <a href="/contact">Contact</a>
         </nav>
       </div>
       <div class="footer-right">
@@ -255,7 +351,7 @@
     </div>
   </footer>
 
-  <script src="nav.js"></script>
+  <script src="../nav.js"></script>
 
 </body>
 </html>
