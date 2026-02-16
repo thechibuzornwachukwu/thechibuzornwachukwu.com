@@ -2358,7 +2358,7 @@ body.menu-open {
 }
 
 .teaching-text p {
-  font-family: var(--font-body-serif);
+  /* font-family: var(--font-body-serif); */
   font-size: 14px;
   line-height: 1.8;
   color: var(--color-text);
@@ -2424,7 +2424,6 @@ body.menu-open {
 }
 
 .awards-text p {
-  font-family: var(--font-body-serif);
   font-size: 14px;
   line-height: 1.8;
   color: var(--color-text);

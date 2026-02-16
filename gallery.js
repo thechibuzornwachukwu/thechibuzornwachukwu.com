@@ -2,7 +2,6 @@
   var items = document.querySelectorAll('.gallery-item');
   if (!items.length) return;
 
-  var isConvocation = document.querySelector('.gallery-grid[data-gallery="convocation"]') !== null;
   var currentIndex = 0;
 
   // ========================================
@@ -44,12 +43,10 @@
       '<div class="gallery-lightbox__info">' +
         '<span class="gallery-lightbox__counter"></span>' +
         '<span class="gallery-lightbox__caption"></span>' +
-        (isConvocation
-          ? '<a class="gallery-lightbox__download" href="" download>' +
-              '<svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>' +
-              'Download' +
-            '</a>'
-          : '') +
+        '<a class="gallery-lightbox__download" href="" download>' +
+          '<svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>' +
+          'Download' +
+        '</a>' +
       '</div>' +
     '</div>';
 
