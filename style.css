@@ -5595,3 +5595,14 @@ body.menu-open {
     font-size: 28px;
   }
 }
+
+/* Legal Pages (Privacy & Terms) */
+.legal-page {
+  padding-top: 0;
+}
+.legal-page .article-body h2 {
+  margin-top: 40px;
+}
+.legal-page .article-body h2:first-child {
+  margin-top: 0;
+}
