@@ -15,6 +15,7 @@
   <meta name="twitter:description" content="How Netflix's recommendation engine systematically narrows viewer choices, creating intellectual bubbles that reinforce existing preferences.">
   <meta name="twitter:image" content="https://thechibuzornwachukwu.com/assets/images/insights/netflix-echo-chamber.webp">
   <link rel="stylesheet" href="../../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -85,8 +86,6 @@
   <!-- Article Detail -->
   <main class="article-detail">
     <div class="article-meta">
-      <span class="article-tag">Essay / Ethics</span>
-      <span class="article-meta__sep">&middot;</span>
       <span class="article-meta__read-time">6 min read</span>
       <span class="article-meta__sep">&middot;</span>
       <time class="article-meta__date">2025</time>
@@ -94,29 +93,24 @@
 
     <h1>Sadly, Netflix is an Echo Chamber</h1>
 
-    <article class="article-body">
-      <p>
-        The world’s favourite, Netflix, is astonishingly efficient. Perhaps tooo efficient. 
+    <article class="article-body" id="article-content"></article>
+
+    <script id="article-md" type="text/markdown">
+The world's favourite, Netflix, is astonishingly efficient. Perhaps tooo efficient.
 
 I mean it gets you binge watching for 12 hours on the weekends.
 
 Same as many other modern recommender systems.
 
-<br><br> 
-
 They optimize for relevance, user engagement, and retention, often at the expense of novelty and serendipity.
 
 The result? Feedback loops that reinforce what users already believe, know, or prefer.
 
-From social feeds to product suggestions, we’re increasingly confined within algorithmically curated echo chambers.
+From social feeds to product suggestions, we're increasingly confined within algorithmically curated echo chambers.
 
-<br><br> 
-
-I’ve seen this before . . .
+I've seen this before . . .
 
 Ah, yes
-
-<br><br> 
 
 In traditional education. Where student hearing the same outdated lecture for the fifth year in a row.
 
@@ -124,7 +118,7 @@ Nothing new. Nothing challenging. Nothing transformative.
 
 Yet what if breaking this pattern is exactly what we need?
 
-It now begs the question, should recommendation as a Mirror — Or a Map?
+## Recommendation as a Mirror — Or a Map?
 
 Current recommender systems operate like mirrors. They reflect our past interactions — likes, clicks, dwell times — into an increasingly personalized (and often myopic) experience.
 
@@ -132,54 +126,54 @@ It is common knowledge now that these models typically optimize for metrics like
 
 But what if they optimized for exploration?
 
-What if we created a parallel content stream that intentionally deviates from user behavior patterns — a feed we might call: “Not For You.”
+What if we created a parallel content stream that intentionally deviates from user behavior patterns — a feed we might call: **"Not For You."**
 
-Get Chibuzor Nwachukwu’s stories in your inbox
-Join Medium for free to get updates from this writer.
-
-Enter your email
-Subscribe
 Not random. Not irrelevant. Just… different.
 
-The Case for Algorithmic Novelty
-Press enter or click to view image in full size
+## The Case for Algorithmic Novelty
 
-Photo by A. C. on Unsplash
-The idea of “Not For You” feeds hinges on a concept I’ve been mulling over:
+The idea of "Not For You" feeds hinges on a concept I've been mulling over:
 
-adventure radius.
+**Adventure radius.**
 
-It’s the algorithmic boundary that determines how far content suggestions can diverge from a user’s known preferences — without being completely disconnected from their core interests.
+It's the algorithmic boundary that determines how far content suggestions can diverge from a user's known preferences — without being completely disconnected from their core interests.
 
-This isn’t a brand-new idea.
+This isn't a brand-new idea.
 
-It’s just largely unexplored at scale.
+It's just largely unexplored at scale.
 
-A well-calibrated adventure radius, backed by baseline content quality thresholds, can expose users to new knowledge domains, challenge confirmation bias, encourage cross-category discovery. All these would lead to long-term user satisfaction, not just short-term engagement.
+A well-calibrated adventure radius, backed by baseline content quality thresholds, can:
+
+- Expose users to new knowledge domains
+- Challenge confirmation bias
+- Encourage cross-category discovery
+
+All these would lead to long-term user satisfaction, not just short-term engagement.
 
 Rather than clustering user preferences too tightly, the algorithm becomes a curator of unfamiliar, high-potential ideas — think exploration with guardrails.
 
-Risks in the Wild
-Press enter or click to view image in full size
+## Risks in the Wild
 
-Photo by mana5280 on Unsplash
-There are two main challenges to this “Not For You” approach:
+There are two main challenges to this "Not For You" approach:
 
-Content Safety: Without proper filters, users could be exposed to harmful, irrelevant, or offensive content under the guise of novelty.
-Exploitation by Threat Actors: Just as adversarial attacks can manipulate language models to generate toxic or biased content, recommendation systems could be gamed to inject harmful materials under the radar.
-This is why the solution must be both robust and auditable. We need intelligent gating systems — possibly using ensemble filters, toxicity classifiers, and metadata auditing — to ensure the system’s adventurous spirit doesn’t become its Achilles’ heel.
+1. **Content Safety:** Without proper filters, users could be exposed to harmful, irrelevant, or offensive content under the guise of novelty.
+2. **Exploitation by Threat Actors:** Just as adversarial attacks can manipulate language models to generate toxic or biased content, recommendation systems could be gamed to inject harmful materials under the radar.
 
-Read more on LinkedIn via Mission To SCALE.
+This is why the solution must be both robust and auditable. We need intelligent gating systems — possibly using ensemble filters, toxicity classifiers, and metadata auditing — to ensure the system's adventurous spirit doesn't become its Achilles' heel.
 
-Your Future Is Bigger Than “You Might Also Like”
-Recommender systems are more than tools for engagement — they’re becoming societal infrastructure. And with that comes a responsibility to think beyond optimization.
+## Your Future Is Bigger Than "You Might Also Like"
+
+Recommender systems are more than tools for engagement — they're becoming societal infrastructure. And with that comes a responsibility to think beyond optimization.
 
 By introducing controlled novelty and intentional diversity, we can create systems that expand perspectives rather than trap them. Systems that guide, not just reflect.
 
 As AI becomes more embedded in our lives — from the media we consume to the people we connect with — the cost of narrow-minded algorithms will only rise.
-        
-      </p>
-    </article>
+    </script>
+
+    <script>
+      const md = document.getElementById('article-md').textContent;
+      document.getElementById('article-content').innerHTML = marked.parse(md);
+    </script>
 
     <a href="/insights" class="article-back-link">&larr; Back to The Library</a>
   </main>
@@ -189,7 +183,6 @@ As AI becomes more embedded in our lives — from the media we consume to the pe
     <h2>More from the Library</h2>
     <div class="more-articles__grid">
       <a href="/insights/ai-bias-proof" class="article-card">
-        <span class="article-tag">Essay / Ethics</span>
         <h3>I Finally Found Proof That AI is Biased</h3>
         <p class="article-synopsis">
           Everyone talks about AI bias in the abstract. I went looking for concrete evidence. This piece documents my investigation into real-world machine learning systems, the patterns of discrimination I uncovered, and why the industry's standard responses are inadequate.
@@ -197,7 +190,6 @@ As AI becomes more embedded in our lives — from the media we consume to the pe
         <span class="read-link">Read article &rarr;</span>
       </a>
       <a href="/insights/plants-can-cry" class="article-card">
-        <span class="article-tag">Essay / Data Science</span>
         <h3>Plants Can Cry? (And Other Data Oddities)</h3>
         <p class="article-synopsis">
           Data tells stories, but sometimes those stories are stranger than fiction. This exploration dives into the peculiar findings that emerge when you look closely at datasets—from acoustic emissions in stressed plants to statistical anomalies.

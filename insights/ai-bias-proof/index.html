@@ -15,6 +15,7 @@
   <meta name="twitter:description" content="Documenting an investigation into real-world machine learning systems, the patterns of discrimination uncovered, and why the industry's standard responses are inadequate.">
   <meta name="twitter:image" content="https://thechibuzornwachukwu.com/assets/images/insights/ai-bias-proof.webp">
   <link rel="stylesheet" href="../../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
 
@@ -85,8 +86,6 @@
   <!-- Article Detail -->
   <main class="article-detail">
     <div class="article-meta">
-      <span class="article-tag">Essay / Ethics</span>
-      <span class="article-meta__sep">&middot;</span>
       <span class="article-meta__read-time">8 min read</span>
       <span class="article-meta__sep">&middot;</span>
       <time class="article-meta__date">2025</time>
@@ -94,9 +93,16 @@
 
     <h1>I Finally Found Proof That AI is Biased</h1>
 
-    <article class="article-body">
-      <p>Article content goes here. Replace this with your full article.</p>
-    </article>
+    <article class="article-body" id="article-content"></article>
+
+    <script id="article-md" type="text/markdown">
+*This article is coming soon. Check back for the full piece.*
+    </script>
+
+    <script>
+      const md = document.getElementById('article-md').textContent;
+      document.getElementById('article-content').innerHTML = marked.parse(md);
+    </script>
 
     <a href="/insights" class="article-back-link">&larr; Back to The Library</a>
   </main>
@@ -106,7 +112,6 @@
     <h2>More from the Library</h2>
     <div class="more-articles__grid">
       <a href="/insights/netflix-echo-chamber" class="article-card">
-        <span class="article-tag">Essay / Ethics</span>
         <h3>Sadly, Netflix is an Echo Chamber</h3>
         <p class="article-synopsis">
           The algorithm knows what you like. Too well. I examined how Netflix's recommendation engine systematically narrows viewer choices, creating intellectual bubbles that reinforce existing preferences while quietly eliminating exposure to challenging content.
@@ -114,7 +119,6 @@
         <span class="read-link">Read article &rarr;</span>
       </a>
       <a href="/insights/plants-can-cry" class="article-card">
-        <span class="article-tag">Essay / Data Science</span>
         <h3>Plants Can Cry? (And Other Data Oddities)</h3>
         <p class="article-synopsis">
           Data tells stories, but sometimes those stories are stranger than fiction. This exploration dives into the peculiar findings that emerge when you look closely at datasets—from acoustic emissions in stressed plants to statistical anomalies.
