@@ -3111,6 +3111,10 @@ body.menu-open {
   line-height: 1.5;
 }
 
+.article-hero-img{
+  margin-top: 100px;
+}
+
 /* ============================================
    Part 1G — Responsive Breakpoints
    ============================================ */
