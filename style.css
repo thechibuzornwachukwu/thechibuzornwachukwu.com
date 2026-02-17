@@ -3116,6 +3116,39 @@ body.menu-open {
 }
 
 /* ============================================
+   Values Section
+   ============================================ */
+
+.values-section {
+  padding: 80px 60px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.values-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-heading);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.values-description {
+  font-family: var(--font-body-serif);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ============================================
    Part 1G — Responsive Breakpoints
    ============================================ */
 
@@ -3474,6 +3507,15 @@ body.menu-open {
   .experience-section {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .values-section {
+    padding: 60px 24px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .experience-index{
