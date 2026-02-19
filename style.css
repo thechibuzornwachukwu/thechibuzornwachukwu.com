@@ -1177,7 +1177,7 @@ body.menu-open {
 }
 
 .bio-section {
-  margin-top: 250px;
+  margin-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 10px;
