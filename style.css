@@ -1,11 +1,11 @@
 /* ============================================
-   Chibuzor Nwachukwu — Personal Site
+   Chibuzor Nwachukwu   Personal Site
    Theme: Burgundy Minimalism
    ============================================ */
 
 /* --- Self-Hosted Fonts --- */
 
-/* Nunito Sans — 300 (Light) */
+/* Nunito Sans   300 (Light) */
 @font-face {
   font-family: 'Nunito Sans';
   src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
@@ -14,7 +14,7 @@
   font-display: swap;
 }
 
-/* Nunito Sans — 400 (Regular) */
+/* Nunito Sans   400 (Regular) */
 @font-face {
   font-family: 'Nunito Sans';
   src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
@@ -23,7 +23,7 @@
   font-display: swap;
 }
 
-/* Nunito Sans — 500 (Medium) */
+/* Nunito Sans   500 (Medium) */
 @font-face {
   font-family: 'Nunito Sans';
   src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
@@ -32,7 +32,7 @@
   font-display: swap;
 }
 
-/* Nunito Sans — 700 (Bold) */
+/* Nunito Sans   700 (Bold) */
 @font-face {
   font-family: 'Nunito Sans';
   src: url('assets/fonts/nunito-sans-latin.woff2') format('woff2');
@@ -41,7 +41,7 @@
   font-display: swap;
 }
 
-/* Instrument Serif — 400 (Regular) */
+/* Instrument Serif   400 (Regular) */
 @font-face {
   font-family: 'Instrument Serif';
   src: url('assets/fonts/instrument-serif-400.woff2') format('woff2');
@@ -50,7 +50,7 @@
   font-display: swap;
 }
 
-/* Space Mono — 400 (Regular) */
+/* Space Mono   400 (Regular) */
 @font-face {
   font-family: 'Space Mono';
   src: url('assets/fonts/space-mono-400.woff2') format('woff2');
@@ -59,7 +59,7 @@
   font-display: swap;
 }
 
-/* Space Mono — 700 (Bold) */
+/* Space Mono   700 (Bold) */
 @font-face {
   font-family: 'Space Mono';
   src: url('assets/fonts/space-mono-700.woff2') format('woff2');
@@ -68,7 +68,7 @@
   font-display: swap;
 }
 
-/* Crimson Pro — 400 (Regular) */
+/* Crimson Pro   400 (Regular) */
 @font-face {
   font-family: 'Crimson Pro';
   src: url('assets/fonts/crimson-pro-latin.woff2') format('woff2');
@@ -77,7 +77,7 @@
   font-display: swap;
 }
 
-/* Crimson Pro — 600 (Semi-Bold) */
+/* Crimson Pro   600 (Semi-Bold) */
 @font-face {
   font-family: 'Crimson Pro';
   src: url('assets/fonts/crimson-pro-latin.woff2') format('woff2');
@@ -86,7 +86,7 @@
   font-display: swap;
 }
 
-/* Crimson Pro — 400 Italic */
+/* Crimson Pro   400 Italic */
 @font-face {
   font-family: 'Crimson Pro';
   src: url('assets/fonts/crimson-pro-italic-400.woff2') format('woff2');
@@ -96,7 +96,7 @@
 }
 
 /* ============================================
-   Part 1A — Color Palette & Variables
+   Part 1A   Color Palette & Variables
    ============================================ */
 :root {
   --color-heading:   #280201;
@@ -118,7 +118,7 @@
 }
 
 /* ============================================
-   Part 1B — Reset, Typography & Base Styles
+   Part 1B   Reset, Typography & Base Styles
    ============================================ */
 *,
 *::before,
@@ -186,7 +186,7 @@ h4 {
 }
 
 /* ============================================
-   Part 1C — Navigation
+   Part 1C   Navigation
    ============================================ */
 
 /* --- Top Bar --- */
@@ -581,7 +581,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 1D — Shared Components
+   Part 1D   Shared Components
    ============================================ */
 .container {
   max-width: 1200px;
@@ -726,7 +726,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 1E — Footer (Redesigned)
+   Part 1E   Footer (Redesigned)
    ============================================ */
 .site-footer {
   background: var(--color-light);
@@ -930,13 +930,13 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 1F — Page-Specific Styles
+   Part 1F   Page-Specific Styles
    ============================================ */
 
 /* ----- HOMEPAGE ----- */
 
 /* ============================================
-   Hero V2 — Bold & Clean (mobile-first)
+   Hero V2   Bold & Clean (mobile-first)
    ============================================ */
 .hero-v2 {
   display: flex;
@@ -1030,7 +1030,7 @@ body.menu-open {
   text-align: center;
 }
 
-/* ---- Hero V2 — Tablet (481px+) ---- */
+/* ---- Hero V2   Tablet (481px+) ---- */
 @media (min-width: 481px) {
   .hero-v2 {
     padding: 160px 32px 64px;
@@ -1054,7 +1054,7 @@ body.menu-open {
   }
 }
 
-/* ---- Hero V2 — Desktop (769px+) ---- */
+/* ---- Hero V2   Desktop (769px+) ---- */
 @media (min-width: 769px) {
   .hero-v2 {
     flex-direction: row;
@@ -1208,7 +1208,7 @@ body.menu-open {
   text-align: justify;
 }
 
-/* About — inline (homepage section) */
+/* About   inline (homepage section) */
 .about {
   padding: 120px 60px;
   position: relative;
@@ -1297,7 +1297,7 @@ body.menu-open {
 }
 
 /* ============================================
-   About Section — New Layout (Phase 2)
+   About Section   New Layout (Phase 2)
    ============================================ */
 .about-section {
   padding: 100px 80px 10px;
@@ -2113,7 +2113,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 1G — Responsive Breakpoints
+   Part 1G   Responsive Breakpoints
    ============================================ */
 
 @media (max-width: 768px) {
@@ -2738,7 +2738,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 5 — Insights Page (Full)
+   Part 5   Insights Page (Full)
    ============================================ */
 
 .Insights-full {
@@ -2796,7 +2796,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 5 — Contact Page (Full)
+   Part 5   Contact Page (Full)
    ============================================ */
 
 /* ============================================
@@ -3153,7 +3153,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Part 5 — Responsive for Insights & Contact
+   Part 5   Responsive for Insights & Contact
    ============================================ */
 
 @media (max-width: 768px) {
@@ -3250,7 +3250,7 @@ body.menu-open {
   }
 }
 
-/* ---- About & Services Intro — Desktop (769px+) ---- */
+/* ---- About & Services Intro   Desktop (769px+) ---- */
 @media (min-width: 769px) {
   .about-intro,
   .services-intro {
@@ -3259,7 +3259,7 @@ body.menu-open {
 }
 
 /* ============================================
-   Gallery — Masonry Grid, Items & Lightbox
+   Gallery   Masonry Grid, Items & Lightbox
    ============================================ */
 
 /* --- Gallery Page Container --- */
@@ -4060,7 +4060,7 @@ body.menu-open {
   line-height: 1.7;
 }
 
-/* Article Detail Responsive — 768px */
+/* Article Detail Responsive   768px */
 @media (max-width: 768px) {
   .article-hero-img {
     max-height: 360px;
@@ -4104,7 +4104,7 @@ body.menu-open {
   }
 }
 
-/* Article Detail Responsive — 480px */
+/* Article Detail Responsive   480px */
 @media (max-width: 480px) {
   .article-hero-img {
     max-height: 260px;
