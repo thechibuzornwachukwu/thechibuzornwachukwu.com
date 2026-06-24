@@ -181,7 +181,7 @@
 
         if (!navigator.onLine) {
           statusEl.textContent = 'No internet connection. Please check your network and try again.';
-          statusEl.style.color = '#666666';
+          statusEl.style.color = '#c62828';
           statusEl.style.display = 'block';
           return;
         }
@@ -199,7 +199,7 @@
           if (res.ok) {
             form.reset();
             statusEl.textContent = 'Message sent! I\'ll get back to you soon.';
-            statusEl.style.color = '#222222';
+            statusEl.style.color = '#2e7d32';
             statusEl.style.display = 'block';
           } else {
             throw new Error('Server error');
@@ -207,7 +207,7 @@
         })
         .catch(function () {
           statusEl.textContent = 'Something went wrong. Please try again or email me directly.';
-          statusEl.style.color = '#666666';
+          statusEl.style.color = '#c62828';
           statusEl.style.display = 'block';
         })
         .finally(function () {
