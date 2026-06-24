@@ -112,6 +112,7 @@
           <!-- Honeypot spam protection -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="contact-submit-btn">Send Message</button>
+          <p class="contact-form__status" style="display:none; margin-top: 12px; font-size: 13px;"></p>
         </form>
       </div>
     </section>
@@ -167,6 +168,55 @@
   </footer>
 
   <script src="../nav.js"></script>
+  <script>
+    (function () {
+      var form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      var statusEl = document.querySelector('.contact-form__status');
+      var btn = form.querySelector('.contact-submit-btn');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!navigator.onLine) {
+          statusEl.textContent = 'No internet connection. Please check your network and try again.';
+          statusEl.style.color = '#c62828';
+          statusEl.style.display = 'block';
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        statusEl.style.display = 'none';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.reset();
+            statusEl.textContent = 'Message sent! I\'ll get back to you soon.';
+            statusEl.style.color = '#2e7d32';
+            statusEl.style.display = 'block';
+          } else {
+            throw new Error('Server error');
+          }
+        })
+        .catch(function () {
+          statusEl.textContent = 'Something went wrong. Please try again or email me directly.';
+          statusEl.style.color = '#c62828';
+          statusEl.style.display = 'block';
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

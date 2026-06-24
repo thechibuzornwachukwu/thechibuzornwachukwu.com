@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chibuzor Nwachukwu</title>
-  <meta name="description" content="Chibuzor Nwachukwu  Data Scientist, AI Engineer & Investigator solving overlooked problems with strategy, people, and product.">
-  <meta property="og:title" content="Chibuzor Nwachukwu  Solving Overlooked Problems">
-  <meta property="og:description" content="Data Scientist. AI Engineer. Investigator. Engineering interventions for the problems others ignore.">
+  <meta name="description" content="Chibuzor Nwachukwu Product Innovator, AI Governance & Responsible AI Specialist building products, ideas, and systems around overlooked problems.">
+  <meta property="og:title" content="Chibuzor Nwachukwu Building products, ideas, and systems around overlooked problems.">
+  <meta property="og:description" content="Product Innovator, AI Governance & Responsible AI Specialist building products, ideas, and systems around overlooked problems">
   <meta property="og:url" content="https://thechibuzornwachukwu.com">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Chibuzor Nwachukwu  Solving Overlooked Problems">
-  <meta name="twitter:description" content="Data Scientist. AI Engineer. Investigator. Engineering interventions for the problems others ignore.">
+  <meta name="twitter:title" content="Chibuzor Nwachukwu Innovator, AI Governance & Responsible AI Specialist building products, ideas, and systems around overlooked problems">
+  <meta name="twitter:description" content="Product Innovator, AI Governance & Responsible AI Specialist building products, ideas, and systems around overlooked problems">
   <link rel="icon" type="image/svg+xml" href="/assets/images/icon/logo-1.svg">
   <link rel="icon" type="image/jpeg" href="/assets/images/icon/logo-1.jpg">
   <link rel="apple-touch-icon" href="/assets/images/icon/logo-1.jpg">
@@ -292,8 +292,7 @@
     <p class="contact-headline">
       Let's build solutions for problems that deserve more attention. 
       Whether you're exploring responsible AI adoption, developing a new product, 
-      or thinking through a complex challenge, I'd love to connect.
-.</p>
+      or thinking through a complex challenge, I'd love to connect.</p>
     <a href="/contact" class="link-arrow">Contact Me</a>
   </section>
 
@@ -347,61 +346,6 @@
   </footer>
 
   <script src="nav.js"></script>
-
-  <!-- Carousel Infinite Auto-Scroll Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var track = document.querySelector('.carousel-track');
-      if (!track) return;
-
-      var cards = Array.from(track.children);
-      var gap = 24;
-      var timer;
-      var interval = 3000;
-
-      // Clone all cards and append for seamless loop
-      cards.forEach(function(card) {
-        var clone = card.cloneNode(true);
-        track.appendChild(clone);
-      });
-
-      // Width of the original set of cards
-      var originalWidth = cards.reduce(function(sum, card) {
-        return sum + card.offsetWidth + gap;
-      }, 0);
-
-      function autoScroll() {
-        var scrollAmount = cards[0].offsetWidth + gap;
-        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-
-      // When we've scrolled past the original set, jump back instantly
-      track.addEventListener('scroll', function() {
-        if (track.scrollLeft >= originalWidth) {
-          track.style.scrollBehavior = 'auto';
-          track.scrollLeft -= originalWidth;
-          track.style.scrollBehavior = 'smooth';
-        }
-      });
-
-      function startAutoScroll() {
-        timer = setInterval(autoScroll, interval);
-      }
-
-      function stopAutoScroll() {
-        clearInterval(timer);
-      }
-
-      startAutoScroll();
-
-      track.addEventListener('mouseenter', stopAutoScroll);
-      track.addEventListener('mouseleave', startAutoScroll);
-      track.addEventListener('touchstart', stopAutoScroll);
-      track.addEventListener('touchend', function() {
-        setTimeout(startAutoScroll, 2000);
-      });
-    });
-  </script>
 
 </body>
 </html>
