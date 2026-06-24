@@ -999,17 +999,6 @@ body.menu-open {
   object-fit: cover;
 }
 
-.hero-v2__statement {
-  font-family: var(--font-main);
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--color-text);
-  line-height: 1.4;
-  margin-top: 16px;
-  margin-bottom: 0;
-  max-width: 480px;
-}
-
 .hero-v2__cta {
   display: flex;
   gap: 12px;
@@ -1024,26 +1013,19 @@ body.menu-open {
   text-align: center;
 }
 
+.hero-v2__about-mobile {
+  display: none;
+}
+
 /* ---- Hero V2   Tablet (481px+) ---- */
 @media (min-width: 481px) {
   .hero-v2 {
     padding: 160px 32px 64px;
   }
 
-  .hero-v2__roles {
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    margin-top: 28px;
-  }
-
   .hero-v2__photo img {
     max-width: 480px;
     border-radius: 12px;
-  }
-
-  .hero-v2__statement {
-    font-size: 20px;
-    margin-top: 20px;
   }
 }
 
@@ -1059,12 +1041,6 @@ body.menu-open {
   .hero-v2__content {
     flex: 1 1 55%;
     min-width: 0;
-  }
-
-  .hero-v2__roles {
-    font-size: 11px;
-    letter-spacing: 0.25em;
-    margin-top: 32px;
   }
 
   .hero-v2__photo {
@@ -2658,6 +2634,14 @@ body.menu-open {
 
   .hero-v2__photo {
     justify-content: center;
+  }
+
+  .hero-v2__about-mobile {
+    display: block;
+  }
+
+  .about-intro__heading {
+    display: none;
   }
 }
 
