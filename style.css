@@ -1013,10 +1013,6 @@ body.menu-open {
   text-align: center;
 }
 
-.hero-v2__about-mobile {
-  display: none;
-}
-
 /* ---- Hero V2   Tablet (481px+) ---- */
 @media (min-width: 481px) {
   .hero-v2 {
@@ -2636,20 +2632,11 @@ body.menu-open {
     justify-content: center;
   }
 
-  .hero-v2__about-mobile {
-    display: block;
-  }
-
   .hero-v2__cta {
     display: none;
   }
 
   .about-intro__heading {
-    display: none;
-  }
-
-  .about-intro > p,
-  .about-intro > .link-arrow {
     display: none;
   }
 }
