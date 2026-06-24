@@ -936,8 +936,8 @@ body.menu-open {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-secondary);
-  margin-bottom: 28px;
+  color: var(--color-muted);
+  margin-top: 24px;
 }
 
 .hero-v2__name {
@@ -980,14 +980,14 @@ body.menu-open {
 }
 
 .hero-v2__statement {
-  font-family: var(--font-body-serif);
-  font-size: 16px;
-  font-style: italic;
-  color: var(--color-muted);
-  line-height: 1.5;
-  margin-top: 28px;
-  margin-bottom: 32px;
-  max-width: 420px;
+  font-family: var(--font-main);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-top: 16px;
+  margin-bottom: 0;
+  max-width: 480px;
 }
 
 .hero-v2__cta {
@@ -1013,7 +1013,7 @@ body.menu-open {
   .hero-v2__roles {
     font-size: 10px;
     letter-spacing: 0.22em;
-    margin-bottom: 36px;
+    margin-top: 28px;
   }
 
   .hero-v2__photo img {
@@ -1022,9 +1022,8 @@ body.menu-open {
   }
 
   .hero-v2__statement {
-    font-size: 18px;
-    margin-top: 36px;
-    margin-bottom: 36px;
+    font-size: 20px;
+    margin-top: 20px;
   }
 }
 
@@ -1045,7 +1044,7 @@ body.menu-open {
   .hero-v2__roles {
     font-size: 11px;
     letter-spacing: 0.25em;
-    margin-bottom: 40px;
+    margin-top: 32px;
   }
 
   .hero-v2__photo {
@@ -1061,9 +1060,8 @@ body.menu-open {
   }
 
   .hero-v2__statement {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    font-size: 22px;
+    margin-top: 24px;
   }
 }
 
