@@ -13,10 +13,10 @@
   font-display: swap;
 }
 
-/* Instrument Serif   400 (Regular) */
+/* Belarus   400 (Regular) */
 @font-face {
-  font-family: 'Instrument Serif';
-  src: url('assets/fonts/instrument-serif-400.woff2') format('woff2');
+  font-family: 'Belarus';
+  src: url('assets/fonts/Belarus.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -82,7 +82,7 @@
   --color-bg:        #FFFFFF;
 
   --font-main:       'Nunito Sans', sans-serif;
-  --font-display:    'Instrument Serif', serif;
+  --font-display:    'Belarus', serif;
   --font-mono:       'Space Mono', monospace;
   --font-body-serif: 'Crimson Pro', serif;
 
@@ -2640,7 +2640,16 @@ body.menu-open {
     display: block;
   }
 
+  .hero-v2__cta {
+    display: none;
+  }
+
   .about-intro__heading {
+    display: none;
+  }
+
+  .about-intro > p,
+  .about-intro > .link-arrow {
     display: none;
   }
 }
