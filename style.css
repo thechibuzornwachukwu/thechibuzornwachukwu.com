@@ -1299,7 +1299,7 @@ body.menu-open {
 
 /* About Introduction Block */
 .about-intro {
-  text-align: center;
+  text-align: left;
   margin-bottom: 80px;
 }
 
