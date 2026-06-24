@@ -699,6 +699,26 @@ body.menu-open {
   margin-bottom: 12px;
 }
 
+.section-label--page {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 48px;
+}
+
+.position-card--image {
+  padding: 0;
+  border: none;
+}
+
+.contact-form__status {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
 /* ============================================
    Part 1E   Footer (Redesigned)
    ============================================ */
@@ -1950,7 +1970,6 @@ body.menu-open {
 }
 
 .teaching-text p {
-  /* font-family: var(--font-body-serif); */
   font-size: 14px;
   line-height: 1.8;
   color: var(--color-text);
@@ -2361,15 +2380,6 @@ body.menu-open {
   }
 
   /* Awards */
-  .award-header {
-    padding: 20px 24px;
-  }
-
-  .award-info {
-    gap: 16px;
-  }
-
-  /* Awards */
   .awards-columns {
     grid-template-columns: 1fr;
     column-gap: 0;
@@ -2548,45 +2558,6 @@ body.menu-open {
   .teaching-text p {
     font-size: 13px;
     line-height: 1.7;
-  }
-
-  /* Awards - Mobile */
-  .awards {
-    padding: 60px 24px;
-  }
-
-  .awards h2 {
-    font-size: 28px;
-  }
-
-  .award-header {
-    padding: 16px 20px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .award-info {
-    gap: 12px;
-  }
-
-  .award-icon {
-    font-size: 24px;
-  }
-
-  .award-info h3 {
-    font-size: 15px;
-  }
-
-  .award-toggle {
-    font-size: 20px;
-  }
-
-  .award-item.open .award-content {
-    padding: 0 20px 16px;
-  }
-
-  .award-content p {
-    font-size: 14px;
   }
 
   /* Preview sections */
