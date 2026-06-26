@@ -135,6 +135,25 @@ The real question remains:
       document.getElementById('article-content').innerHTML = marked.parse(md);
     </script>
 
+    <div class="article-actions">
+      <button class="article-actions__heart" id="article-heart" data-slug="plants-can-cry">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="article-actions__count" id="heart-count">0</span>
+      </button>
+      <div class="article-actions__share">
+        <span class="article-actions__share-label">Share</span>
+        <a href="https://twitter.com/intent/tweet?text=Plants%20Can%20Cry&url=https://thechibuzornwachukwu.com/musings/plants-can-cry" target="_blank" rel="noopener" aria-label="Share on X">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://linkedin.com/sharing/share-offsite/?url=https://thechibuzornwachukwu.com/musings/plants-can-cry" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <button onclick="navigator.clipboard.writeText('https://thechibuzornwachukwu.com/musings/plants-can-cry');this.querySelector('svg').style.stroke='var(--color-primary)';setTimeout(()=>this.querySelector('svg').style.stroke='',1500)" aria-label="Copy link">
+          <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+      </div>
+    </div>
+
     <a href="/musings" class="article-back-link">&larr; Back to Musings</a>
   </main>
 
@@ -209,6 +228,7 @@ The real question remains:
   </footer>
 
   <script src="../../nav.js"></script>
+  <script src="../../article.js"></script>
 
 </body>
 </html>

@@ -3832,6 +3832,103 @@ body.menu-open {
   color: var(--color-accent);
 }
 
+/* Article Actions: Heart + Share */
+.article-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 16px;
+  margin-top: 48px;
+  border-top: 1px solid var(--color-border);
+}
+
+.article-actions__heart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-muted);
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.article-actions__heart svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--color-muted);
+  stroke-width: 1.8;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.article-actions__heart:hover svg {
+  stroke: var(--color-accent);
+}
+
+.article-actions__heart.liked {
+  color: var(--color-accent);
+}
+
+.article-actions__heart.liked svg {
+  fill: var(--color-accent);
+  stroke: var(--color-accent);
+}
+
+.article-actions__count {
+  min-width: 16px;
+  text-align: left;
+}
+
+.article-actions__share {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.article-actions__share-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.article-actions__share a,
+.article-actions__share button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  color: var(--color-muted);
+  transition: color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+
+.article-actions__share a:hover,
+.article-actions__share button:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.article-actions__share svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Back Link */
 .article-back-link {
   display: inline-block;
