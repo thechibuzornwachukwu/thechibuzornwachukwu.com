@@ -212,6 +212,106 @@
         
       </div>
     </div>
+    <div class="marquee-dots" id="marqueeDots"></div>
+    <script>
+      (function () {
+        var track = document.querySelector('.marquee-track');
+        var dotsEl = document.getElementById('marqueeDots');
+        if (!track || !dotsEl) return;
+        var wrapper = track.parentElement;
+        var imgs = track.querySelectorAll('img');
+        if (imgs.length < 2) return;
+
+        var pos = 0;
+        var animId = null;
+        var isPaused = false;
+        var speed = 0.0008;
+        var active = 0;
+
+        function getMaxScroll() {
+          return Math.max(track.scrollWidth - wrapper.clientWidth, 0);
+        }
+
+        function applyPos() {
+          var maxScroll = getMaxScroll();
+          if (maxScroll <= 0) return;
+          track.style.transform = 'translateX(-' + (pos * maxScroll) + 'px)';
+        }
+
+        function updateDots() {
+          dotsEl.querySelectorAll('.marquee-dot').forEach(function (d, i) {
+            d.classList.toggle('active', i === active);
+          });
+        }
+
+        function goTo(index) {
+          active = index;
+          pos = index / (imgs.length - 1);
+          applyPos();
+          updateDots();
+          isPaused = true;
+        }
+
+        function loop() {
+          if (!isPaused) {
+            pos += speed;
+            if (pos > 1) pos = 0;
+            applyPos();
+            var dotIndex = Math.round(pos * (imgs.length - 1));
+            if (dotIndex !== active) {
+              active = dotIndex;
+              updateDots();
+            }
+          }
+          animId = requestAnimationFrame(loop);
+        }
+
+        imgs.forEach(function (_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'marquee-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to logo ' + (i + 1));
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsEl.appendChild(dot);
+        });
+
+        var startX = 0;
+        var startPos = 0;
+        var isDragging = false;
+
+        wrapper.addEventListener('pointerdown', function (e) {
+          isDragging = true;
+          startX = e.clientX;
+          startPos = pos;
+          wrapper.setPointerCapture(e.pointerId);
+        });
+
+        wrapper.addEventListener('pointermove', function (e) {
+          if (!isDragging) return;
+          var delta = (e.clientX - startX) / wrapper.clientWidth;
+          pos = Math.max(0, Math.min(1, startPos - delta));
+          var dotIndex = Math.round(pos * (imgs.length - 1));
+          if (dotIndex !== active) {
+            active = dotIndex;
+            updateDots();
+          }
+          applyPos();
+        });
+
+        wrapper.addEventListener('pointerup', function () {
+          if (!isDragging) return;
+          isDragging = false;
+          isPaused = true;
+        });
+
+        wrapper.addEventListener('pointercancel', function () {
+          isDragging = false;
+          isPaused = true;
+        });
+
+        window.addEventListener('resize', applyPos);
+        loop();
+      })();
+    </script>
     <aside class="evidence__testimonial">
       <div class="evidence__testimonial-border"></div>
       <p class="evidence__testimonial-text">
@@ -224,14 +324,32 @@
   <!-- Musings Preview -->
   <section class="Insights-preview" id="Insights">
     <h2>Musings</h2>
-    <ul class="Insights-list">
-      <li><a href="/musings/when-there-is-life-there-is-hope">When There's Life, There's Hope</a></li>
-      <li><a href="/musings/it-is-well">It is Well</a></li>
-      <li><a href="/musings/wake-up">Wake Up</a></li>
-      <li><a href="/musings/writing-on-the-wall">The Writing On The Wall</a></li>
-      <li><a href="/musings/he-who-forms">An Ode to He Who Forms</a></li>
-      <li><a href="/musings/plants-can-cry">Plants Can Cry?</a></li>
-    </ul>
+    <div class="Insights-grid">
+      <a href="/musings/when-there-is-life-there-is-hope" class="Insights-card">
+        <div class="Insights-card-img">
+          <img src="musings/when-there-is-life-there-is-hope/when-there-is-life-there-is-hope.webp" alt="When There's Life, There's Hope" loading="lazy">
+        </div>
+        <div class="Insights-card-body">
+          <h3>When There's Life, There's Hope</h3>
+        </div>
+      </a>
+      <a href="/musings/it-is-well" class="Insights-card">
+        <div class="Insights-card-img">
+          <img src="musings/it-is-well/it-is-well.webp" alt="It is Well" loading="lazy">
+        </div>
+        <div class="Insights-card-body">
+          <h3>It is Well</h3>
+        </div>
+      </a>
+      <a href="/musings/wake-up" class="Insights-card">
+        <div class="Insights-card-img">
+          <img src="musings/wake-up/wake-up.webp" alt="Wake Up" loading="lazy">
+        </div>
+        <div class="Insights-card-body">
+          <h3>Wake Up</h3>
+        </div>
+      </a>
+    </div>
     <a href="/musings" class="link-arrow">Browse the musings</a>
 
     <aside class="evidence__testimonial">
