@@ -89,6 +89,16 @@
   --overlay-red: rgba(91, 26, 24, 0.45);
 }
 
+/* Selection Highlight */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+::-moz-selection {
+  background: var(--color-primary);
+  color: var(--color-light);
+}
+
 /* ============================================
    Part 1B   Reset, Typography & Base Styles
    ============================================ */
