@@ -1385,7 +1385,9 @@ body.menu-open {
 }
 
 .about-intro__lead {
+  font-family: var(--font-display);
   font-size: 30px;
+  font-weight: 400;
   line-height: 1.35;
   color: var(--color-light);
   max-width: 20ch;
@@ -1537,7 +1539,7 @@ body.menu-open {
 }
 
 .about-statement__btn:hover {
-  background: var(--color-accent);
+  background: var(--color-secondary);
   transform: translateY(-2px);
 }
 
@@ -2332,11 +2334,12 @@ body.menu-open {
     border-radius: 24px;
   }
 
-  /* About Section - Tablet/Mobile */
+  /* About Section - Tablet/Mobile: full-bleed background, not a bounded
+     rounded card like on desktop */
   .about-section {
-    padding: 40px 24px 24px;
-    margin: 24px 16px;
-    border-radius: 24px;
+    padding: 40px 24px;
+    margin: 24px 0;
+    border-radius: 0;
   }
 
   .about-intro {
@@ -2654,7 +2657,6 @@ body.menu-open {
   /* About Section - Small Mobile */
   .about-section {
     padding: 48px 16px;
-    padding-bottom: 0px;
   }
 
   .about-image-col img {
