@@ -21,30 +21,22 @@
 </head>
 <body>
 
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="top-bar-inner">
-      <a href="mailto:thechibuzornwachukwu@gmail.com">thechibuzornwachukwu@gmail.com</a>
-
-    </div>
-  </div>
-
   <!-- Main Nav -->
   <nav class="site-nav">
+    <a href="/" class="nav-logo">Chibuzor Nwachukwu</a>
     <div class="nav-links">
-      <a href="/about">About Me</a>
+      <a href="/about">About Chibuzor</a>
       <a href="/portfolio" class="active">Portfolio</a>
-      <a href="/" class="nav-logo">Chibuzor Nwachukwu</a>
       <div class="nav-item--has-dropdown">
         <a href="#" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow"></span></a>
         <div class="dropdown-menu" role="menu">
-          <a href="/musings" role="menuitem">Musings</a>
           <a href="/gallery" role="menuitem">Gallery</a>
+          <a href="/press-kit" role="menuitem">Press Kit</a>
         </div>
       </div>
-      <a href="/initiatives">Initiatives</a>
+      <a href="/contact">Contact</a>
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
     </div>
-    <a href="/contact" class="nav-cta">Reach Out</a>
     <button class="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -53,418 +45,377 @@
   <!-- Mobile Overlay -->
   <div class="mobile-menu-overlay">
     <div class="mobile-menu-links">
-      <a href="/about">About Me</a>
+      <a href="/about">About Chibuzor</a>
       <a href="/portfolio">Portfolio</a>
       <div class="mobile-dropdown">
         <button class="mobile-dropdown-trigger" aria-expanded="false">Resources <span class="dropdown-arrow"></span></button>
         <div class="mobile-submenu">
-          <a href="/musings">Musings</a>
           <a href="/gallery">Gallery</a>
+          <a href="/press-kit">Press Kit</a>
         </div>
       </div>
-      <a href="/initiatives">Initiatives</a>
-      <a href="/contact" class="nav-cta">Reach Out</a>
+      <a href="/contact">Contact</a>
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
     </div>
   </div>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <span class="section-label">PORTFOLIO</span>
-    <h1>Selected Work</h1>
-    <p>Case studies showcasing AI, data science, and product innovations.</p>
+  <!-- Quotla: full-bleed dark band, doubles as this page's hero (same device as About's Bio section) -->
+  <section class="project-hero" id="quotla">
+
+    <div class="project-hero__intro-block">
+      <span class="section-label">Portfolio</span>
+      <h1 class="project-hero__intro-heading">Selected Work</h1>
+      <p class="project-hero__intro">Case studies showcasing AI, data science, and product innovations.</p>
+    </div>
+
+    <div class="project-hero__grid">
+      <div class="project-hero__media">
+        <span class="section-label">Featured Build</span>
+        <h2 class="project-hero__name">Quotla</h2>
+        <a class="project-hero__shot" href="https://quotla.app" target="_blank" rel="noopener">
+          <img src="../assets/images/portfolio/quotla-app-preview.png" alt="Quotla product landing page">
+        </a>
+      </div>
+
+      <div class="project-hero__copy">
+        <p class="project-hero__lede">AI-native business operating system for African small businesses</p>
+
+        <p class="project-hero__text">
+          Small business owners often manage quotes, invoices, expenses, inventory and customer records
+          across WhatsApp, notebooks, spreadsheets and disconnected tools. This creates unnecessary
+          administrative work and makes it harder to understand the state of the business.
+        </p>
+        <p class="project-hero__text">
+          I built Quotla to bring these workflows into one platform, starting with quoting and invoicing
+          and expanding toward broader business management. I conducted user research to understand
+          friction across B2B and B2C workflows, then designed and engineered a document management
+          system with automated tax logic, multi-currency support and AI-assisted content generation.
+        </p>
+        <p class="project-hero__text">
+          The product is now live and has evolved toward a more ambitious direction: an AI-native
+          business assistant that allows owners to complete business tasks conversationally, including
+          through WhatsApp.
+        </p>
+
+        <p class="project-hero__outcome">
+          <span>Outcome</span>
+          Reduced manual work around business documentation, created a scalable foundation for broader
+          financial and operational workflows, and validated a product direction around making business
+          management accessible to non-technical users.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <!-- Horizontal Scroll Project Strip -->
-  <section class="project-strip-section">
-    <div class="project-strip">
+  <!-- Featured Projects: floating cream panel, same device as the About page's Experience section -->
+  <section class="project-list panel-frame" id="featured-projects">
+    <span class="section-label">Featured Projects</span>
+    <div class="project-rows">
 
-      <!-- 1. Quotla -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Quotla</h3>
-        <p class="project-strip__desc">A professional business management platform for creating quotes and invoices with AI-powered content generation.</p>
-        <div class="project-strip__tags">
-          <span>Product Management</span>
-          <span>AI</span>
-          <span>Data Privacy</span>
+      <article class="project-row">
+        <h3 class="project-row__name">Adversarial Attacks on RAG-based Large Language Models</h3>
+        <p class="project-row__lede">AI Security &amp; Evaluation Research</p>
+        <div class="project-row__body">
+          <p>
+            Retrieval-Augmented Generation improves the reliability of language models by grounding
+            responses in external information, but the retrieval and generation pipeline can still be
+            manipulated by adversarial inputs.
+          </p>
+          <p>
+            For my undergraduate research, I investigated how adversarial text perturbations could
+            affect a RAG system's ability to retrieve relevant information and maintain semantic
+            integrity. I developed a hybrid retrieval pipeline combining FAISS vector search and
+            TF-IDF keyword retrieval, followed by cross-encoder reranking and FLAN-T5 answer generation.
+          </p>
+          <p>
+            I then introduced adversarial transformations such as synonym substitution and word
+            deletion, developed an Adversarial Risk Index and additional similarity measures to
+            evaluate the resulting changes, and built an interactive Gradio interface for testing
+            normal and adversarial responses.
+          </p>
         </div>
-      </div>
+        <p class="project-row__outcome">
+          <span>Outcome</span>
+          Produced a modular RAG security evaluation system that made adversarial behaviour measurable
+          and observable. The work established the technical foundation for my broader interest in AI
+          security, evaluation and governance.
+        </p>
+      </article>
 
-      <!-- 2. BlueSky Scraper -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">BlueSky Scraper</h3>
-        <p class="project-strip__desc">A lightweight, modular FastAPI service for collecting and analyzing social data across multiple platforms.</p>
-        <div class="project-strip__tags">
-          <span>Data Scraping</span>
-          <span>FastAPI</span>
-          <span>Data Collection</span>
+      <article class="project-row">
+        <h3 class="project-row__name">Testifi</h3>
+        <p class="project-row__lede">Building safer digital spaces for personal testimony and community stories</p>
+        <div class="project-row__body">
+          <p>
+            Sharing personal experiences online can create tension between community participation,
+            privacy and personal control. Testifi was built around the idea of giving people a
+            structured space to share testimonies while retaining greater control over how their
+            stories are presented.
+          </p>
+          <p>
+            I conducted user and market research, synthesised more than 40 qualitative responses and
+            translated the findings into the product roadmap. Working with the design team, I also
+            reworked onboarding around accessibility and then helped build the functional MVP using
+            TypeScript, Supabase and Claude Code.
+          </p>
         </div>
-      </div>
+        <p class="project-row__outcome">
+          <span>Outcome</span>
+          The MVP attracted more than four dozen active users within its first week and created a
+          feedback loop for validating the product's core assumptions through real user behaviour.
+        </p>
+      </article>
 
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 3. Adversarial Attacks on RAG -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Adversarial Attacks on RAG</h3>
-        <p class="project-strip__desc">A hybrid RAG system evaluated for adversarial robustness using NLP-based perturbation attacks.</p>
-        <div class="project-strip__tags">
-          <span>LLMOps</span>
-          <span>Machine Learning</span>
-          <span>AI Security</span>
+      <article class="project-row">
+        <h3 class="project-row__name">AI Governance &amp; Assurance</h3>
+        <p class="project-row__lede">Turning responsible AI principles into practical engineering controls</p>
+        <div class="project-row__body">
+          <p>
+            As AI systems move into products and institutional workflows, governance cannot stop at
+            broad principles. Teams need practical ways to identify risks, evaluate systems and
+            establish controls before and after deployment.
+          </p>
+          <p>
+            I have been developing a practical AI governance approach that connects technical AI
+            security with frameworks including the NIST AI Risk Management Framework, EU AI Act and
+            OWASP guidance for LLM applications. My focus is on translating governance requirements
+            into things engineering and product teams can actually implement: risk assessment, data
+            governance, security controls, evaluation, human oversight, documentation, monitoring and
+            incident response.
+          </p>
+          <p>
+            This work builds directly on my research into adversarial RAG systems and my experience
+            building AI-enabled products.
+          </p>
         </div>
-      </div>
+        <p class="project-row__outcome">
+          <span>Outcome</span>
+          Established a professional direction at the intersection of AI engineering, product
+          development, security and policy, with the goal of helping organisations build and deploy
+          AI systems that are useful, accountable and defensible.
+        </p>
+      </article>
 
-      <!-- 4. Project Valor AI -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Project Valor AI</h3>
-        <p class="project-strip__desc">Automated analysis of produce quality through image recognition for farmers, vendors, and consumers.</p>
-        <div class="project-strip__tags">
-          <span>AI</span>
-          <span>Computer Vision</span>
-          <span>Product Management</span>
+      <article class="project-row">
+        <h3 class="project-row__name">BlueSky Scraper</h3>
+        <p class="project-row__lede">Data infrastructure for social and policy intelligence</p>
+        <div class="project-row__body">
+          <p>
+            Researchers and analysts often need access to public discourse data without building a new
+            collection system for every source. I built BlueSky Scraper as a lightweight, modular
+            FastAPI service for collecting and analysing social and institutional data.
+          </p>
+          <p>
+            The system supports keyword-based searches, pagination, rate limiting, deduplication and
+            incremental data storage, while remaining structured for deployment as either a standalone
+            backend or microservice. Although it began with Bluesky, the architecture was designed to
+            support additional sources such as news, YouTube and other platforms.
+          </p>
         </div>
-      </div>
+        <p class="project-row__outcome">
+          <span>Outcome</span>
+          Created reusable data infrastructure that can support research, monitoring, analytics and
+          policy intelligence rather than a single-purpose scraping workflow.
+        </p>
+      </article>
 
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 5. FileConverter -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">FileConverter</h3>
-        <p class="project-strip__desc">A lightweight Python utility for converting between Excel, CSV, and structured JSON formats with CLI support.</p>
-        <div class="project-strip__tags">
-          <span>Python</span>
-          <span>CLI</span>
+      <article class="project-row">
+        <h3 class="project-row__name">Safe Signal</h3>
+        <p class="project-row__lede">Anonymous reporting product</p>
+        <div class="project-row__body">
+          <p>
+            People need ways to report sensitive issues without exposing themselves to unnecessary
+            risk. Safe Signal explored how a digital product could support anonymous reporting while
+            maintaining a usable experience for both reporters and organisations receiving reports.
+          </p>
+          <p>
+            As product manager, I helped define the product direction, prioritise capabilities and
+            shape development timelines around the needs identified through user and market discovery.
+          </p>
         </div>
-      </div>
-
-      <!-- 6. Assessing Business & Sales Trends -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Assessing Business &amp; Sales Trends</h3>
-        <p class="project-strip__desc">A deep dive into the trends and volume of sales, exploring best performing products and profit ratios.</p>
-        <div class="project-strip__tags">
-          <span>Tableau</span>
-          <span>Data Analytics</span>
-          <span>Strategic Insights</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 7. Employee Performance & Attrition -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Employee Performance &amp; Attrition</h3>
-        <p class="project-strip__desc">Insights into employee demographics, satisfaction, and performance to improve HR management across departments.</p>
-        <div class="project-strip__tags">
-          <span>Tableau</span>
-          <span>Data Analytics</span>
-          <span>Strategic Insights</span>
-        </div>
-      </div>
-
-      <!-- 8. Movie Licensing Prediction -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Movie Licensing Prediction</h3>
-        <p class="project-strip__desc">Identifying which titles generate more revenue, achieving 88% accuracy with hyper-parameter tuning.</p>
-        <div class="project-strip__tags">
-          <span>Machine Learning</span>
-          <span>Prediction</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 9. Assessing Inflation & Food Prices in Nigeria -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Assessing Inflation &amp; Food Prices in Nigeria</h3>
-        <p class="project-strip__desc">Comprehensive analysis of food price surges and inflation driven by exchange rate volatility in Nigeria.</p>
-        <div class="project-strip__tags">
-          <span>Power BI</span>
-          <span>Python</span>
-          <span>Data Analytics</span>
-        </div>
-      </div>
-
-      <!-- 10. Collecting & Assessing NIMC Enrolments -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Collecting &amp; Assessing NIMC Enrolments</h3>
-        <p class="project-strip__desc">Scraping and classifying LGA enrollment data across Nigeria with rural/urban breakdowns.</p>
-        <div class="project-strip__tags">
-          <span>Data Scraping</span>
-          <span>Python</span>
-          <span>Data Quality</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 11. Retail Analytics for Roduct Retail Co. -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Retail Analytics for Roduct Retail Co.</h3>
-        <p class="project-strip__desc">End-to-end retail analytics with SQL views, Power BI dashboards, and actionable recommendations.</p>
-        <div class="project-strip__tags">
-          <span>SQL</span>
-          <span>Power BI</span>
-          <span>Data Science</span>
-        </div>
-      </div>
-
-      <!-- 12. In-depth Analysis of Transactions and Products -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">In-depth Analysis of Transactions and Products</h3>
-        <p class="project-strip__desc">Extracting actionable insights from 31K+ transactions worth &#8358;73bn to improve sales and operations.</p>
-        <div class="project-strip__tags">
-          <span>Power BI</span>
-          <span>Data Analysis</span>
-          <span>Data Visualization</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 13. Analysis of Call Centre Trends -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Analysis of Call Centre Trends</h3>
-        <p class="project-strip__desc">Visualizing KPIs and metrics from call data using Power BI and DAX measures across timelines.</p>
-        <div class="project-strip__tags">
-          <span>Power BI</span>
-          <span>DAX</span>
-          <span>Data Analytics</span>
-        </div>
-      </div>
-
-      <!-- 14. End-to-end Spotify Analysis -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">End-to-end Spotify Analysis</h3>
-        <p class="project-strip__desc">Data scraping and visual analysis of the Nigerian music industry, focused on Dunsin Oyekan's releases.</p>
-        <div class="project-strip__tags">
-          <span>Python</span>
-          <span>Power BI</span>
-          <span>Web Scraping</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 15. History and Insights into Father's Day -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">History and Insights into Father's Day</h3>
-        <p class="project-strip__desc">A fun-sized analysis of Father's Day spending patterns and volumes from NRF survey data.</p>
-        <div class="project-strip__tags">
-          <span>Data Analytics</span>
-          <span>Power BI</span>
-          <span>Excel</span>
-        </div>
-      </div>
-
-      <!-- 16. Screen Time Analytics -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Screen Time Analytics</h3>
-        <p class="project-strip__desc">Reclaiming digital sovereignty by tracking, analyzing, and visualizing personal screen time habits.</p>
-        <div class="project-strip__tags">
-          <span>Python</span>
-          <span>Tableau</span>
-          <span>Power BI</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 17. UK Travel & Ticket Sales -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">UK Travel &amp; Ticket Sales</h3>
-        <p class="project-strip__desc">BI analysis for National Rail covering popular routes, peak travel times, and on-time performance.</p>
-        <div class="project-strip__tags">
-          <span>Power BI</span>
-          <span>Data Visualization</span>
-          <span>Data Literacy</span>
-        </div>
-      </div>
-
-      <!-- 18. Tuberculosis in Nigeria and West Africa -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Tuberculosis in Nigeria and West Africa</h3>
-        <p class="project-strip__desc">In-depth analysis of TB cases and incidences across nine years, sourced from WHO data.</p>
-        <div class="project-strip__tags">
-          <span>Tableau</span>
-          <span>Python</span>
-          <span>Data Analytics</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 19. Movie, Book Recommendation Engine -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Movie, Book Recommendation Engine</h3>
-        <p class="project-strip__desc">A recommendation system suggesting Christian movies and books tailored to scriptural references.</p>
-        <div class="project-strip__tags">
-          <span>Machine Learning</span>
-          <span>Python</span>
-          <span>Data Analysis</span>
-        </div>
-      </div>
-
-      <!-- 20. Numerical Methods and Viz -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Numerical Methods and Viz</h3>
-        <p class="project-strip__desc">C++, Java, and Python implementations of Adam Bashforth, Euler, Picard, and Runge Kutta methods.</p>
-        <div class="project-strip__tags">
-          <span>Python</span>
-          <span>C++</span>
-          <span>Data Visualization</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 21. KPMG AU Data Analytics Simulation -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">KPMG AU Data Analytics Simulation</h3>
-        <p class="project-strip__desc">Customer targeting simulation with data quality assessment, high-value customer analysis, and dashboards.</p>
-        <div class="project-strip__tags">
-          <span>Tableau</span>
-          <span>Power BI</span>
-          <span>Data Science</span>
-        </div>
-      </div>
-
-      <!-- 22. Medical Insurance Analysis -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Medical Insurance Analysis</h3>
-        <p class="project-strip__desc">Data visualization project presented at the UNILAG Data Science School and Statistics Without Borders.</p>
-        <div class="project-strip__tags">
-          <span>Data Visualization</span>
-          <span>Python</span>
-          <span>Data Analytics</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 23. Analysis of Market Fire Incidents in Nigeria -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Analysis of Market Fire Incidents in Nigeria</h3>
-        <p class="project-strip__desc">Analysing past cases of market fires in Nigeria to understand patterns and causes.</p>
-        <div class="project-strip__tags">
-          <span>Data Visualization</span>
-          <span>Data Science</span>
-          <span>Data Analysis</span>
-        </div>
-      </div>
-
-      <!-- 24. Google Search Results Scraper -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Google Search Results Scraper</h3>
-        <p class="project-strip__desc">Scraping search results from Google, built for data collection and research workflows.</p>
-        <div class="project-strip__tags">
-          <span>Data Collection</span>
-          <span>Data Science</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 25. Crime Trends in West Africa -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Crime Trends in West Africa</h3>
-        <p class="project-strip__desc">Five decades of crime data across West Africa sourced from the Global Terrorism Database.</p>
-        <div class="project-strip__tags">
-          <span>Data Scraping</span>
-          <span>Python</span>
-          <span>Data Storytelling</span>
-        </div>
-      </div>
-
-      <!-- 26. Jumia Review Scraping & Sentiment Analysis -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Jumia Review Scraping &amp; Sentiment Analysis</h3>
-        <p class="project-strip__desc">Collecting and classifying product reviews with rule-based sentiment analysis from Jumia.</p>
-        <div class="project-strip__tags">
-          <span>Web Scraping</span>
-          <span>Data Analytics</span>
-          <span>Data Science</span>
-        </div>
-      </div>
-
-      <!-- CTA -->
-      <a href="/portfolio/design/" class="project-strip__cta">
-        <span class="project-strip__cta-text">View Design Work</span>
-        <span class="project-strip__cta-arrow">&rarr;</span>
-      </a>
-
-      <!-- 27. Overview of Commodity Processing Points in Nigeria -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Overview of Commodity Processing Points in Nigeria</h3>
-        <p class="project-strip__desc">Mapping and visualizing recognised food processing points scattered within Nigerian borders.</p>
-        <div class="project-strip__tags">
-          <span>Data Visualization</span>
-          <span>Data Science</span>
-          <span>Data Analysis</span>
-        </div>
-      </div>
-
-      <!-- 28. Linear Regression for Advertising -->
-      <div class="project-strip__card">
-        <h3 class="project-strip__name">Linear Regression for Advertising</h3>
-        <p class="project-strip__desc">Determining optimal ad spend allocation across TV, radio, and newspaper channels to maximise sales.</p>
-        <div class="project-strip__tags">
-          <span>Machine Learning</span>
-          <span>Data Science</span>
-          <span>EDA</span>
-        </div>
-      </div>
+        <p class="project-row__outcome">
+          <span>Outcome</span>
+          Established a product foundation for anonymous reporting with privacy and trust treated as
+          core product considerations rather than secondary features.
+        </p>
+      </article>
 
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Archive: the earlier data/BI project catalogue, compact and out of the way of the featured work -->
+  <section class="project-archive" id="archive">
+    <span class="section-label">More Projects</span>
+    <div class="project-archive__grid">
+
+      <div class="project-archive__item">
+        <h4>Project Valor AI</h4>
+        <p>Automated analysis of produce quality through image recognition for farmers, vendors, and consumers.</p>
+        <div class="project-archive__tags"><span>AI</span><span>Computer Vision</span><span>Product Management</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>FileConverter</h4>
+        <p>A lightweight Python utility for converting between Excel, CSV, and structured JSON formats with CLI support.</p>
+        <div class="project-archive__tags"><span>Python</span><span>CLI</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Assessing Business &amp; Sales Trends</h4>
+        <p>A deep dive into the trends and volume of sales, exploring best performing products and profit ratios.</p>
+        <div class="project-archive__tags"><span>Tableau</span><span>Data Analytics</span><span>Strategic Insights</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Employee Performance &amp; Attrition</h4>
+        <p>Insights into employee demographics, satisfaction, and performance to improve HR management across departments.</p>
+        <div class="project-archive__tags"><span>Tableau</span><span>Data Analytics</span><span>Strategic Insights</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Movie Licensing Prediction</h4>
+        <p>Identifying which titles generate more revenue, achieving 88% accuracy with hyper-parameter tuning.</p>
+        <div class="project-archive__tags"><span>Machine Learning</span><span>Prediction</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Assessing Inflation &amp; Food Prices in Nigeria</h4>
+        <p>Comprehensive analysis of food price surges and inflation driven by exchange rate volatility in Nigeria.</p>
+        <div class="project-archive__tags"><span>Power BI</span><span>Python</span><span>Data Analytics</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Collecting &amp; Assessing NIMC Enrolments</h4>
+        <p>Scraping and classifying LGA enrollment data across Nigeria with rural/urban breakdowns.</p>
+        <div class="project-archive__tags"><span>Data Scraping</span><span>Python</span><span>Data Quality</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Retail Analytics for Roduct Retail Co.</h4>
+        <p>End-to-end retail analytics with SQL views, Power BI dashboards, and actionable recommendations.</p>
+        <div class="project-archive__tags"><span>SQL</span><span>Power BI</span><span>Data Science</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>In-depth Analysis of Transactions and Products</h4>
+        <p>Extracting actionable insights from 31K+ transactions worth &#8358;73bn to improve sales and operations.</p>
+        <div class="project-archive__tags"><span>Power BI</span><span>Data Analysis</span><span>Data Visualization</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Analysis of Call Centre Trends</h4>
+        <p>Visualizing KPIs and metrics from call data using Power BI and DAX measures across timelines.</p>
+        <div class="project-archive__tags"><span>Power BI</span><span>DAX</span><span>Data Analytics</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>End-to-end Spotify Analysis</h4>
+        <p>Data scraping and visual analysis of the Nigerian music industry, focused on Dunsin Oyekan's releases.</p>
+        <div class="project-archive__tags"><span>Python</span><span>Power BI</span><span>Web Scraping</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>History and Insights into Father's Day</h4>
+        <p>A fun-sized analysis of Father's Day spending patterns and volumes from NRF survey data.</p>
+        <div class="project-archive__tags"><span>Data Analytics</span><span>Power BI</span><span>Excel</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Screen Time Analytics</h4>
+        <p>Reclaiming digital sovereignty by tracking, analyzing, and visualizing personal screen time habits.</p>
+        <div class="project-archive__tags"><span>Python</span><span>Tableau</span><span>Power BI</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>UK Travel &amp; Ticket Sales</h4>
+        <p>BI analysis for National Rail covering popular routes, peak travel times, and on-time performance.</p>
+        <div class="project-archive__tags"><span>Power BI</span><span>Data Visualization</span><span>Data Literacy</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Tuberculosis in Nigeria and West Africa</h4>
+        <p>In-depth analysis of TB cases and incidences across nine years, sourced from WHO data.</p>
+        <div class="project-archive__tags"><span>Tableau</span><span>Python</span><span>Data Analytics</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Movie, Book Recommendation Engine</h4>
+        <p>A recommendation system suggesting Christian movies and books tailored to scriptural references.</p>
+        <div class="project-archive__tags"><span>Machine Learning</span><span>Python</span><span>Data Analysis</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Numerical Methods and Viz</h4>
+        <p>C++, Java, and Python implementations of Adam Bashforth, Euler, Picard, and Runge Kutta methods.</p>
+        <div class="project-archive__tags"><span>Python</span><span>C++</span><span>Data Visualization</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>KPMG AU Data Analytics Simulation</h4>
+        <p>Customer targeting simulation with data quality assessment, high-value customer analysis, and dashboards.</p>
+        <div class="project-archive__tags"><span>Tableau</span><span>Power BI</span><span>Data Science</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Medical Insurance Analysis</h4>
+        <p>Data visualization project presented at the UNILAG Data Science School and Statistics Without Borders.</p>
+        <div class="project-archive__tags"><span>Data Visualization</span><span>Python</span><span>Data Analytics</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Analysis of Market Fire Incidents in Nigeria</h4>
+        <p>Analysing past cases of market fires in Nigeria to understand patterns and causes.</p>
+        <div class="project-archive__tags"><span>Data Visualization</span><span>Data Science</span><span>Data Analysis</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Google Search Results Scraper</h4>
+        <p>Scraping search results from Google, built for data collection and research workflows.</p>
+        <div class="project-archive__tags"><span>Data Collection</span><span>Data Science</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Crime Trends in West Africa</h4>
+        <p>Five decades of crime data across West Africa sourced from the Global Terrorism Database.</p>
+        <div class="project-archive__tags"><span>Data Scraping</span><span>Python</span><span>Data Storytelling</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Jumia Review Scraping &amp; Sentiment Analysis</h4>
+        <p>Collecting and classifying product reviews with rule-based sentiment analysis from Jumia.</p>
+        <div class="project-archive__tags"><span>Web Scraping</span><span>Data Analytics</span><span>Data Science</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Overview of Commodity Processing Points in Nigeria</h4>
+        <p>Mapping and visualizing recognised food processing points scattered within Nigerian borders.</p>
+        <div class="project-archive__tags"><span>Data Visualization</span><span>Data Science</span><span>Data Analysis</span></div>
+      </div>
+
+      <div class="project-archive__item">
+        <h4>Linear Regression for Advertising</h4>
+        <p>Determining optimal ad spend allocation across TV, radio, and newspaper channels to maximise sales.</p>
+        <div class="project-archive__tags"><span>Machine Learning</span><span>Data Science</span><span>EDA</span></div>
+      </div>
+
+    </div>
+
+    <div class="project-archive__cta">
+      <a href="/portfolio/design/" class="link-arrow">View Design Work</a>
+    </div>
+  </section>
+
+  <!-- Contact + Footer: same floating rounded-panel treatment as homepage -->
+  <div class="contact-footer-panel">
+  <section class="contact-preview" id="contact">
+    <h2>Get in Touch</h2>
+    <p class="contact-headline">
+      Let's build solutions for problems that deserve more attention.
+      Whether you're exploring responsible AI adoption, developing a new product,
+      or thinking through a complex challenge, I'd love to connect.</p>
+    <a href="/contact" class="link-arrow">Contact Me</a>
+  </section>
+
   <footer class="site-footer">
     <div class="footer-main">
       <div class="footer-left">
@@ -474,7 +425,7 @@
           <a href="/about">About</a>
           <a href="/portfolio">Portfolio</a>
           <a href="/musings">Musings</a>
-          <a href="/initiatives">Initiatives</a>
+          <a href="/work-with-me">Work With Me</a>
           <a href="/contact">Contact</a>
         </nav>
       </div>
@@ -502,6 +453,9 @@
         <a href="https://medium.com/@thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="Medium">
           <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
         </a>
+        <a href="https://substack.com/@thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="Substack">
+          <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        </a>
       </div>
       <div class="footer-legal">
         <span>&copy; 2026 Chibuzor Nwachukwu</span>
@@ -512,6 +466,7 @@
       </div>
     </div>
   </footer>
+  </div>
 
   <script src="../nav.js"></script>
 
