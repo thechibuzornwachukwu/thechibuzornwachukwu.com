@@ -4698,32 +4698,12 @@ body.menu-open {
 }
 
 /* Ways We Can Work Together: typographic list, no numbers, no dividers,
-   same left-accent-bar-on-hover device as the homepage about-panes-col */
+   no accent bar, typography and whitespace carry the hierarchy */
 .engagement-list {
   display: flex;
   flex-direction: column;
   gap: 56px;
   margin-top: 32px;
-}
-
-.engagement-item {
-  position: relative;
-  padding-left: 28px;
-}
-
-.engagement-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  bottom: 6px;
-  width: 2px;
-  background: var(--color-border);
-  transition: background 0.25s ease;
-}
-
-.engagement-item:hover::before {
-  background: var(--color-primary);
 }
 
 .engagement-item__tag {
@@ -5181,8 +5161,6 @@ body.menu-open {
 .wwm-after__note {
   text-align: left;
   margin-top: 32px;
-  padding-left: 20px;
-  border-left: 2px solid var(--color-primary);
   font-size: 14px;
   line-height: 1.75;
   color: var(--color-muted);
