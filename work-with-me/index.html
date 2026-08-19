@@ -306,6 +306,20 @@
       </div>
       <p class="contact-form__status"></p>
     </form>
+
+    <div class="wwm-success-overlay" id="wwmSuccessOverlay" hidden>
+      <div class="wwm-success-popup" role="alertdialog" aria-live="polite" aria-labelledby="wwmSuccessTitle">
+        <button type="button" class="wwm-success-popup__close" aria-label="Close">&times;</button>
+        <div class="wwm-success-popup__icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12.5L9.5 18L20 6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="wwm-success-popup__title" id="wwmSuccessTitle">Got it, thank you</h3>
+        <p class="wwm-success-popup__message">I&rsquo;ll get back to you soon.</p>
+        <div class="wwm-success-popup__timer"><div class="wwm-success-popup__timer-fill"></div></div>
+      </div>
+    </div>
   </section>
 
   <aside class="testimonial-split">
@@ -652,6 +666,52 @@
 
       renderStep();
 
+      // --- Success popup: auto-dismisses after a few seconds unless the
+      // visitor closes it first. The timer bar underneath shows how long
+      // is left, and pauses if the visitor hovers over the popup. ---
+      var overlay = document.getElementById('wwmSuccessOverlay');
+      var popup = overlay.querySelector('.wwm-success-popup');
+      var closeBtn = overlay.querySelector('.wwm-success-popup__close');
+      var timerFill = overlay.querySelector('.wwm-success-popup__timer-fill');
+      var dismissTimeout = null;
+      var AUTO_DISMISS_MS = 6000;
+
+      function hideSuccessPopup() {
+        clearTimeout(dismissTimeout);
+        overlay.classList.remove('is-visible');
+        overlay.addEventListener('transitionend', function handler() {
+          overlay.removeEventListener('transitionend', handler);
+          overlay.hidden = true;
+        }, { once: true });
+      }
+
+      function showSuccessPopup() {
+        overlay.hidden = false;
+        timerFill.style.transitionDuration = '0ms';
+        timerFill.style.width = '100%';
+        // Force reflow so the width reset above applies before the
+        // transition below starts, otherwise it just jumps to 0.
+        void timerFill.offsetWidth;
+        requestAnimationFrame(function () {
+          overlay.classList.add('is-visible');
+          timerFill.style.transitionDuration = AUTO_DISMISS_MS + 'ms';
+          timerFill.style.width = '0%';
+        });
+        dismissTimeout = setTimeout(hideSuccessPopup, AUTO_DISMISS_MS);
+      }
+
+      closeBtn.addEventListener('click', hideSuccessPopup);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) hideSuccessPopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && overlay.classList.contains('is-visible')) hideSuccessPopup();
+      });
+      popup.addEventListener('mouseenter', function () { clearTimeout(dismissTimeout); });
+      popup.addEventListener('mouseleave', function () {
+        dismissTimeout = setTimeout(hideSuccessPopup, AUTO_DISMISS_MS);
+      });
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -676,9 +736,7 @@
             form.reset();
             currentStep = 0;
             renderStep();
-            statusEl.textContent = 'Got it, thank you! I\'ll get back to you soon.';
-            statusEl.style.color = '#2e7d32';
-            statusEl.style.display = 'block';
+            showSuccessPopup();
           } else {
             throw new Error('Server error');
           }

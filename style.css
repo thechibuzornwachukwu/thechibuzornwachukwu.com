@@ -5112,6 +5112,122 @@ body.menu-open {
   }
 }
 
+/* Success popup: replaces the barely-visible inline status line on submit.
+   Auto-dismisses on its own via the timer bar, but can be closed early. */
+.wwm-success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(20, 1, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.wwm-success-overlay[hidden] {
+  display: flex;
+  pointer-events: none;
+}
+
+.wwm-success-overlay.is-visible {
+  opacity: 1;
+}
+
+.wwm-success-popup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--color-bg);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(20, 1, 0, 0.28);
+  padding: 48px 40px 0;
+  text-align: center;
+  overflow: hidden;
+  transform: translateY(14px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.wwm-success-overlay.is-visible .wwm-success-popup {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.wwm-success-popup__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.wwm-success-popup__close:hover {
+  color: var(--color-primary);
+}
+
+.wwm-success-popup__icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: rgba(74, 124, 89, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wwm-success-popup__icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #4a7c59;
+}
+
+.wwm-success-popup__title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-heading);
+  margin-bottom: 10px;
+}
+
+.wwm-success-popup__message {
+  font-size: 15px;
+  color: var(--color-muted);
+  margin-bottom: 32px;
+}
+
+.wwm-success-popup__timer {
+  height: 3px;
+  background: var(--color-border);
+}
+
+.wwm-success-popup__timer-fill {
+  height: 100%;
+  width: 100%;
+  background: var(--color-primary);
+  transition: width linear;
+}
+
+@media (max-width: 480px) {
+  .wwm-success-popup {
+    padding: 40px 24px 0;
+  }
+
+  .wwm-success-popup__title {
+    font-size: 22px;
+  }
+}
+
 /* What Happens Next: narrative paragraphs beside a photo, not a numbered-card list */
 .wwm-after {
   max-width: 1120px;
