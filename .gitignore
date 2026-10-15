@@ -2,6 +2,8 @@
 node_modules
 .env
 *.txt
+!robots.txt
+!llms.txt
 lessons from reddit
 thechibuzornwachukwu - backup-pre-revert-20260811
 thechibuzornwachukwu

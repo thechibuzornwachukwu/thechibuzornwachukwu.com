@@ -1,0 +1,41 @@
+# Chibuzor Nwachukwu
+
+> Chibuzor Nwachukwu works on AI policy and ethics, informed by hands-on work testing how AI systems break. Based in Nigeria. Background in AI engineering and data science.
+
+Current work: contract work in AI regulatory research at an AI governance company (Sep 2026 to present). The client is confidential.
+
+Research interests:
+
+- Evaluation capacity in countries that import AI (under way)
+- Adversarial attacks on retrieval-augmented generation (RAG) systems, including an Adversarial Risk Index (completed, undergraduate thesis)
+- Public discussion of AI in Nigeria, using a data collection service built for Bluesky (under way)
+
+Contact: thechibuzornwachukwu@gmail.com
+
+## Pages
+
+- [About](https://thechibuzornwachukwu.com/about): experience, education and credentials
+- [Portfolio](https://thechibuzornwachukwu.com/portfolio): research and product projects, including the RAG security thesis
+- [Press kit](https://thechibuzornwachukwu.com/press-kit): short and long bios, photos
+- [Contact](https://thechibuzornwachukwu.com/contact)
+
+## Writing
+
+Essays on AI policy and ethics. Index: https://thechibuzornwachukwu.com/writing
+
+- [Who Is Accountable When Anyone Can Build AI?](https://thechibuzornwachukwu.com/writing/accountability-when-anyone-can-build-ai) (2026-09-19): As building with AI gets easier, more people take consequential actions with it. Four questions to answer before you build or deploy anything with AI in it.
+- [AI as Infrastructure: Open Questions on Reliance and Harm](https://thechibuzornwachukwu.com/writing/ai-as-infrastructure) (2026-09-11): We are trying to govern a technology while our relationship with it is still being negotiated. Three questions on infrastructure, dependence and what counts as harm.
+- [Formal Control, Real Dependence: Human Oversight and Automation Bias](https://thechibuzornwachukwu.com/writing/human-oversight-and-automation-bias) (2026-09-04): A person can remain formally in control of a decision while losing the ability or confidence to exercise independent judgment. What oversight rules should account for.
+- [Consent Without Comprehension: Agreement in AI Products](https://thechibuzornwachukwu.com/writing/consent-without-comprehension) (2026-08-29): 74% of participants in one study skipped a privacy policy, yet 97% agreed to it. Why a checkbox is not meaningful consent when AI systems use personal data.
+- [Challenger, 1986: Deployment Without Ongoing Governance](https://thechibuzornwachukwu.com/writing/challenger-deployment-without-ongoing-governance) (2026-07-16): The shuttle had flown 24 missions without incident, so it was approved to fly again. What the Challenger launch decision shows about governing AI after deployment.
+- [The Hawthorne Effect and the Limits of AI Evaluation](https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation) (2026-07-07): Workers in 1924 changed their behaviour because they were being watched. Some AI systems now do the same, which raises hard questions for testing and oversight.
+- [When Intelligence Is Abundant, What Stays Scarce?](https://thechibuzornwachukwu.com/writing/when-intelligence-is-abundant) (2026-07-02): Ford made the knowledge of building a car abundant, and the advantage moved to judgment. The same shift is happening with AI, and it changes which skills matter.
+- [Apollo's Human Computers and the Quiet Cost of Automation](https://thechibuzornwachukwu.com/writing/apollo-human-computers-and-automation) (2026-06-27): NASA engineers once worked every trajectory by hand. When machines took over, nobody called it a loss. What cognitive offloading means for people and for models.
+- [Bias in AI Systems: Five Ethical Tensions](https://thechibuzornwachukwu.com/writing/bias-in-ai-systems) (2026-06-19): AI inherits bias from our decisions and data, then amplifies it. Five tensions: privacy and personalisation, transparency, fairness, autonomy, and reliability.
+- [Model Collapse: The Risk of Training AI on AI Output](https://thechibuzornwachukwu.com/writing/model-collapse-training-on-ai-output) (2026-06-13): The Habsburgs stayed in power through intermarriage until inbreeding depression caught up with them. Models trained on their own output face a similar decline.
+
+## Profiles
+
+- [LinkedIn](https://linkedin.com/in/thechibuzornwachukwu)
+- [GitHub](https://github.com/thechibuzornwachukwu)
+- [X](https://x.com/thechibuzornwac)

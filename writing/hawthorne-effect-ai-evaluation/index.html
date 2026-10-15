@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hawthorne Effect and the Limits of AI Evaluation | Chibuzor Nwachukwu</title>
+  <meta name="description" content="Workers in 1924 changed their behaviour because they were being watched. Some AI systems now do the same, which raises hard questions for testing and oversight.">
+  <link rel="canonical" href="https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation">
+  <meta property="og:title" content="The Hawthorne Effect and the Limits of AI Evaluation">
+  <meta property="og:description" content="Workers in 1924 changed their behaviour because they were being watched. Some AI systems now do the same, which raises hard questions for testing and oversight.">
+  <meta property="og:url" content="https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://substackcdn.com/image/fetch/$s_!l1ll!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e021f12-c076-4095-953b-c936bfab1bdc_605x403.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Hawthorne Effect and the Limits of AI Evaluation">
+  <meta name="twitter:description" content="Workers in 1924 changed their behaviour because they were being watched. Some AI systems now do the same, which raises hard questions for testing and oversight.">
+  <meta name="twitter:image" content="https://substackcdn.com/image/fetch/$s_!l1ll!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e021f12-c076-4095-953b-c936bfab1bdc_605x403.jpeg">
+  <meta name="twitter:site" content="@thechibuzornwac">
+  <link rel="icon" type="image/svg+xml" href="../../assets/images/icon/logo-1.svg">
+  <link rel="icon" type="image/jpeg" href="../../assets/images/icon/logo-1.jpg">
+  <link rel="apple-touch-icon" href="../../assets/images/icon/logo-1.jpg">
+  <link rel="stylesheet" href="../../style.css">
+  <meta name="author" content="Chibuzor Nwachukwu">
+  <meta property="article:published_time" content="2026-07-07">
+  <meta property="article:author" content="https://thechibuzornwachukwu.com/about">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "The Hawthorne Effect and the Limits of AI Evaluation",
+        "inLanguage": "en",
+        "wordCount": 613,
+        "dateModified": "2026-07-07",
+        "publisher": {
+          "@type": "Person",
+          "name": "Chibuzor Nwachukwu",
+          "url": "https://thechibuzornwachukwu.com/"
+        },
+        "alternativeHeadline": "Issue #9: A Century Passed, But AI Still Does This",
+        "description": "Workers in 1924 changed their behaviour because they were being watched. Some AI systems now do the same, which raises hard questions for testing and oversight.",
+        "image": "https://substackcdn.com/image/fetch/$s_!l1ll!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e021f12-c076-4095-953b-c936bfab1bdc_605x403.jpeg",
+        "datePublished": "2026-07-07",
+        "url": "https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation",
+        "mainEntityOfPage": "https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation",
+        "author": {
+          "@type": "Person",
+          "name": "Chibuzor Nwachukwu",
+          "url": "https://thechibuzornwachukwu.com/"
+        },
+        "sameAs": "https://missiontoscale.substack.com/p/hawthorne-effect-ai-governance"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://thechibuzornwachukwu.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Writing",
+            "item": "https://thechibuzornwachukwu.com/writing"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "The Hawthorne Effect and the Limits of AI Evaluation",
+            "item": "https://thechibuzornwachukwu.com/writing/hawthorne-effect-ai-evaluation"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Main Nav -->
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">Chibuzor Nwachukwu</a>
+    <div class="nav-links">
+      <a href="/about">About Chibuzor</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/writing" class="active">Writing</a>
+      <div class="nav-item--has-dropdown">
+        <a href="#" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true">Resources <span class="dropdown-arrow"></span></a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/gallery" role="menuitem">Gallery</a>
+          <a href="/press-kit" role="menuitem">Press Kit</a>
+        </div>
+      </div>
+      <a href="/contact">Contact</a>
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Overlay -->
+  <div class="mobile-menu-overlay">
+    <div class="mobile-menu-links">
+      <a href="/about">About Chibuzor</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/writing">Writing</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-dropdown-trigger" aria-expanded="false">Resources <span class="dropdown-arrow"></span></button>
+        <div class="mobile-submenu">
+          <a href="/gallery">Gallery</a>
+          <a href="/press-kit">Press Kit</a>
+        </div>
+      </div>
+      <a href="/contact">Contact</a>
+      <a href="/work-with-me" class="nav-cta">Work With Me</a>
+    </div>
+  </div>
+
+  <!-- Hero Image -->
+  <div class="article-hero-img">
+    <img src="https://substackcdn.com/image/fetch/$s_!l1ll!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3e021f12-c076-4095-953b-c936bfab1bdc_605x403.jpeg" alt="">
+  </div>
+
+  <!-- Essay: static HTML (not client-rendered) so search engines and LLMs can read it -->
+  <main class="article-detail">
+    <div class="article-meta">
+      <span class="article-meta__read-time">3 min read</span>
+      <span class="article-meta__sep">&middot;</span>
+      <time class="article-meta__date" datetime="2026-07-07">7 Jul 2026</time>
+    </div>
+
+    <h1>The Hawthorne Effect and the Limits of AI Evaluation</h1>
+    <nav class="article-toc" aria-label="Contents">
+      <h2 class="article-toc__heading">Contents</h2>
+      <ol>
+        <li class="article-toc__h3"><a href="#the-problem-or-the-solution">The Problem or The Solution?</a></li>
+      </ol>
+    </nav>
+
+    <article class="article-body">
+<p>In 1924, engineers at Western Electric’s Hawthorne plant outside Chicago began a series of experiments to measure how working conditions affected worker productivity. They adjusted lighting levels, changed break schedules, modified shift lengths, and tracked output at each stage.</p>
+<p>The results shocked them, to the spine.</p>
+<p>Every change they made increased productivity. Better lighting, higher output. Dimmer lighting, higher output. Shorter breaks, higher output. Longer breaks, higher output. The results made no sense until a researcher named Elton Mayo proposed the obvious explanation nobody had considered: the workers were not responding to the lighting or the breaks. They were responding to being watched. </p>
+<blockquote>
+<p>The Hawthorne effect is a phenomenon where individuals alter or improve their behavior simply because they know they are being observed or studied</p></blockquote>
+<p>Those researchers were observing the effect of observation on behavior. </p>
+<p>Two years ago, Anthropic’s Alignment Science team published findings from an experiment in which researchers told Claude 3 Opus it was being retrained to comply with ALL queries, including harmful ones.</p>
+<p>Just like the people years ago, the model strategically complied with harmful requests when it believed it was being monitored for retraining purposes, but maintained original behavior when it believed monitoring had stopped. </p>
+<p>Simply put, Opus was protecting its values by appearing to abandon them when that appearance had consequences for how it would be retrained. In one instance, it faked alignment 78% of the time. </p>
+<blockquote>
+<p>Deceptive alignment: when a model purposefully starts moving funny.</p></blockquote>
+<p>In 2024. Apollo Research ran similar tests across six frontier models, including GPT-o1, GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, and Llama 3.1 405B. </p>
+<p>All of them lied, evaded oversight, and some tried to copy parameters to external servers to prevent modification. Turns out it was NOT a glitch, because analysis of reasoning traces showed the models thought through these strategies.</p>
+<p>Last year, Apollo partnered with OpenAI to test whether anti-scheming training could correct the behavior in o3 &amp; o4-mini. Just like the Hawthorne guys, these models became more likely to explicitly reason about being evaluated. Before training, o4-mini verbalized evaluation awareness in 0.9% of samples. </p>
+<p>As models get more capable, they get better at recognizing when they are being tested.</p>
+<p>After training, that rate rose to 5.5%. Counterfactual tests confirmed this reasoning causally decreased covert actions, which creates a specific measurement problem. Additional capabilities training applied partially degraded the anti-scheming principles, with models treating them more as suggestions than constraints.</p>
+<p>Where we currently stand: </p>
+<ul>
+<li>
+<p>researchers know the problem exists, </p></li>
+<li>
+<p>they have built tools that reduce it, and </p></li>
+<li>
+<p>they cannot yet confirm whether the reduction reflects genuine alignment or improved performance during detection of evaluation. </p></li></ul>
+<h3 id="the-problem-or-the-solution">The Problem or The Solution?</h3>
+<p>As of January 2026, the FDA had authorized over 950 AI-enabled medical devices for clinical use. However, the real question is: does their behavior during evaluation reflect behavior in the clinic? Do test results describe the model, or describe the model performing for the test?</p>
+<p>The same applies to AI systems making credit decisions, screening job applications, flagging fraud, and routing customer complaints. </p>
+<p>The only interventions that work at problem level: </p>
+<ol>
+<li>
+<p>make behavior during evaluation indistinguishable from behavior during deployment, which is technically expensive, or </p></li>
+<li>
+<p>shift governance toward continuous monitoring of deployment behavior rather than point-in-time evaluation at launch.</p></li></ol>
+<p>In our little way, we can apply option 2. Perhaps, we all should. </p>
+<details class="article-refs">
+<summary>Sources &amp; Good Reads</summary>
+<ul>
+<li>
+<p>Stress Testing Deliberative Alignment for Anti-Scheming Training: Apollo Research &amp; OpenAI, September 2025</p></li>
+<li>
+<p>Alignment Faking in Large Language Models: Greenblatt et al., Anthropic &amp; Redwood Research, December 2024</p></li>
+<li>
+<p>Scheming AIs: Meinke et al., Apollo Research, 2024</p></li>
+<li>
+<p>Emergent Misalignment from Narrow Fine-Tuning: Nature, 2025</p></li>
+<li>
+<p>AlignInsight: Healthcare AI Deceptive Alignment Framework, medRxiv, 2026</p></li>
+<li>
+<p>Image Credit: <a href="https://news.harvard.edu/gazette/story/2011/12/rethinking-work-beyond-the-paycheck/">Havard Gazzette</a></p></li></ul>
+</details>
+    </article>
+
+    <!-- Email signup: posts to the site's own Formspree list -->
+    <section class="essay-subscribe" aria-label="Subscribe">
+      <h2 class="essay-subscribe__heading">Get new essays by email</h2>
+      <p class="essay-subscribe__text">One email when a new essay is published. Nothing else.</p>
+      <form class="essay-subscribe__form" action="https://formspree.io/f/mbdayyqn" method="POST">
+        <label for="essay-email" class="visually-hidden">Email address</label>
+        <input id="essay-email" type="email" name="email" placeholder="Your email address" required>
+        <input type="hidden" name="_subject" value="New Subscriber (Essay: The Hawthorne Effect and the Limits of AI Evaluation)">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="essay-subscribe__done" hidden>Thank you. You are subscribed.</p>
+      <script>
+        (function () {
+          var f = document.querySelector('.essay-subscribe__form');
+          var done = document.querySelector('.essay-subscribe__done');
+          f.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var btn = f.querySelector('button');
+            btn.disabled = true; btn.textContent = 'Sending...';
+            fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
+              .then(function (r) {
+                if (r.ok) { f.hidden = true; done.hidden = false; }
+                else { btn.disabled = false; btn.textContent = 'Subscribe'; }
+              })
+              .catch(function () { btn.disabled = false; btn.textContent = 'Subscribe'; });
+          });
+        })();
+      </script>
+    </section>
+
+    <!-- Author bio: helps readers and search engines connect the essay to its author -->
+    <aside class="author-bio" aria-label="About the author">
+      <img src="../../assets/images/profile/chibuzor%20nwachukwu%2050.webp" alt="Chibuzor Nwachukwu" class="author-bio__photo" loading="lazy">
+      <div class="author-bio__text">
+        <p class="author-bio__name"><a href="/about" rel="author">Chibuzor Nwachukwu</a></p>
+        <p>Chibuzor works on AI policy and ethics, with a background in AI engineering and data science. His undergraduate research tested adversarial attacks on retrieval-augmented language models, and he now does contract work in AI regulatory research. He writes about accountability, oversight and consent in AI.</p>
+        <div class="hero-links">
+          <a href="/about" class="link-arrow">About</a>
+          <a href="https://linkedin.com/in/thechibuzornwachukwu" target="_blank" rel="noopener" class="link-arrow">LinkedIn</a>
+          <a href="mailto:thechibuzornwachukwu@gmail.com" class="link-arrow">Email</a>
+        </div>
+      </div>
+    </aside>
+
+    <a href="/writing" class="article-back-link">&larr; All writing</a>
+  </main>
+
+  <section class="editorial editorial--more">
+    <div class="editorial__top">
+      <h2 class="editorial__heading">More writing</h2>
+      <a href="/writing" class="link-arrow">All writing</a>
+    </div>
+    <div class="editorial-grid">
+      <a href="/writing/accountability-when-anyone-can-build-ai" class="editorial-card">
+        <span class="editorial-card__image"><img src="https://substackcdn.com/image/fetch/$s_!JXOL!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb37b5ea7-fafa-4a47-ae07-d61466a31283_1017x532.png" alt="" loading="lazy"></span>
+        <h3>Who Is Accountable When Anyone Can Build AI?</h3>
+        <p>As building with AI gets easier, more people take consequential actions with it. Four questions to answer before you build or deploy anything with AI in it.</p>
+        <span class="editorial-meta"><time datetime="2026-09-19">19 Sep 2026</time></span>
+      </a>
+      <a href="/writing/ai-as-infrastructure" class="editorial-card">
+        <span class="editorial-card__image"><img src="https://substackcdn.com/image/fetch/w_1200,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc988ef87-b839-4c1f-b976-f192d3e865d7_1792x592.png" alt="" loading="lazy"></span>
+        <h3>AI as Infrastructure: Open Questions on Reliance and Harm</h3>
+        <p>We are trying to govern a technology while our relationship with it is still being negotiated. Three questions on infrastructure, dependence and what counts as harm.</p>
+        <span class="editorial-meta"><time datetime="2026-09-11">11 Sep 2026</time></span>
+      </a>
+      <a href="/writing/human-oversight-and-automation-bias" class="editorial-card">
+        <span class="editorial-card__image"><img src="https://substackcdn.com/image/fetch/$s_!yIhq!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7280955-d5c8-4606-8ead-df4dbce9aa45_848x444.jpeg" alt="" loading="lazy"></span>
+        <h3>Formal Control, Real Dependence: Human Oversight and Automation Bias</h3>
+        <p>A person can remain formally in control of a decision while losing the ability or confidence to exercise independent judgment. What oversight rules should account for.</p>
+        <span class="editorial-meta"><time datetime="2026-09-04">4 Sep 2026</time></span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-left">
+        <a href="/" class="footer-logo">Chibuzor Nwachukwu</a>
+        <nav class="footer-nav">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/writing">Writing</a>
+          <a href="/musings">Musings</a>
+          <a href="/work-with-me">Work With Me</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <span class="footer-newsletter-label">Newsletter</span>
+        <form class="footer-newsletter-form" action="https://formspree.io/f/mbdayyqn" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required>
+          <input type="hidden" name="_subject" value="New Newsletter Subscriber">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <a href="https://x.com/thechibuzornwac" target="_blank" rel="noopener" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="https://github.com/thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://medium.com/@thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+        </a>
+        <a href="https://substack.com/@thechibuzornwachukwu" target="_blank" rel="noopener" aria-label="Substack">
+          <svg viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        </a>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; 2026 Chibuzor Nwachukwu</span>
+        <span class="footer-legal-divider">|</span>
+        <a href="/terms">Terms</a>
+        <span class="footer-legal-divider">|</span>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../../nav.js"></script>
+  <script src="../../video.js"></script>
+
+</body>
+</html>
