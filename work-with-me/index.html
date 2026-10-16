@@ -309,6 +309,13 @@
       <p class="contact-form__status"></p>
     </form>
 
+    <!-- In-page confirmation: replaces the section content once an inquiry is sent -->
+    <div class="wwm-confirm" role="status" aria-live="polite" hidden>
+      <h2 class="wwm-confirm__title">Inquiry sent</h2>
+      <p class="wwm-confirm__text">Thank you. I read every inquiry myself and will reply by email, usually within a few days.</p>
+      <button type="button" class="wwm-confirm__again link-arrow">Send another inquiry</button>
+    </div>
+
     <div class="wwm-success-overlay" id="wwmSuccessOverlay" hidden>
       <div class="wwm-success-popup" role="alertdialog" aria-live="polite" aria-labelledby="wwmSuccessTitle">
         <button type="button" class="wwm-success-popup__close" aria-label="Close">&times;</button>
@@ -715,6 +722,38 @@
         dismissTimeout = setTimeout(hideSuccessPopup, AUTO_DISMISS_MS);
       });
 
+      // --- In-page confirmation: the section's content fades out together, the
+      // confirmation fades in, and the page scrolls to it. ---
+      var section = form.closest('.wwm-inquiry');
+      var confirmBox = section.querySelector('.wwm-confirm');
+      var againBtn = confirmBox.querySelector('.wwm-confirm__again');
+
+      function sectionContent() {
+        return Array.prototype.filter.call(section.children, function (el) {
+          return el !== confirmBox && !el.classList.contains('wwm-success-overlay');
+        });
+      }
+
+      function showConfirmation() {
+        section.classList.add('is-leaving');
+        setTimeout(function () {
+          sectionContent().forEach(function (el) { el.hidden = true; });
+          section.classList.remove('is-leaving');
+          confirmBox.hidden = false;
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () { confirmBox.classList.add('is-shown'); });
+          });
+        }, 300);
+      }
+
+      againBtn.addEventListener('click', function () {
+        confirmBox.classList.remove('is-shown');
+        confirmBox.hidden = true;
+        sectionContent().forEach(function (el) { el.hidden = false; });
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -739,7 +778,8 @@
             form.reset();
             currentStep = 0;
             renderStep();
-            showSuccessPopup();
+            // showSuccessPopup();  (previous pop-up confirmation, replaced by the in-page one)
+            showConfirmation();
           } else {
             throw new Error('Server error');
           }

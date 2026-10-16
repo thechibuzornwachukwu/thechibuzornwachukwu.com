@@ -6406,3 +6406,173 @@ h1.about-intro__lead {
     padding-top: 110px;
   }
 }
+
+/* Signup states: the [hidden] attribute must win over display:flex, and the swap animates */
+.essay-subscribe [hidden] {
+  display: none !important;
+}
+
+.essay-subscribe__form {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.essay-subscribe__form.is-leaving {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.essay-subscribe__form.is-sending input {
+  opacity: 0.7;
+}
+
+.essay-subscribe__done {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  font-size: 17px;
+  color: var(--color-light);
+}
+
+.essay-subscribe__done.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.essay-subscribe__done.is-error {
+  margin-top: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .essay-subscribe__form,
+  .essay-subscribe__done {
+    transition: none;
+  }
+}
+
+/* Whole-section swap on success: content fades out, confirmation fades in, background stays */
+.essay-subscribe > * {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.essay-subscribe.is-leaving > * {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.essay-subscribe.is-subscribed {
+  display: flex;
+  align-items: center;
+}
+
+.essay-subscribe__success {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.essay-subscribe__success.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.essay-subscribe__success .essay-subscribe__text {
+  margin-bottom: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .essay-subscribe > *,
+  .essay-subscribe__success {
+    transition: none;
+  }
+}
+
+/* Footer signup: same fade swap as the essay signups */
+.footer-right > * {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-right.is-leaving > * {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.footer-right [hidden] {
+  display: none !important;
+}
+
+.footer-newsletter-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.footer-newsletter-success.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.footer-newsletter-success p {
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-right > *,
+  .footer-newsletter-success {
+    transition: none;
+  }
+}
+
+/* Work With Me: in-page confirmation after an inquiry is sent */
+.wwm-inquiry > * {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wwm-inquiry.is-leaving > * {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.wwm-inquiry [hidden] {
+  display: none !important;
+}
+
+.wwm-confirm {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 24px 0 80px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.wwm-confirm.is-shown {
+  opacity: 1;
+  transform: none;
+}
+
+.wwm-confirm__text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0 0 32px;
+}
+
+.wwm-confirm__again {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wwm-inquiry > *,
+  .wwm-confirm {
+    transition: none;
+  }
+}

@@ -190,6 +190,7 @@
   // Newsletter Form Submission
   // ========================================
 
+  /* Previous footer newsletter handler (button text only):
   var newsletterForm = document.querySelector('.footer-newsletter-form');
   if (newsletterForm) {
     newsletterForm.addEventListener('submit', function (e) {
@@ -229,6 +230,59 @@
             button.disabled = false;
             button.classList.remove('newsletter-error');
           }, 3000);
+        });
+    });
+  }
+
+  */
+
+  // Footer signup: same flow as the essay signups. The label and form fade out together,
+  // then a confirmation fades in at the same height.
+  var newsletterForm = document.querySelector('.footer-newsletter-form');
+  var newsletterBox = newsletterForm && newsletterForm.closest('.footer-right');
+  if (newsletterForm && newsletterBox) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var form = e.target;
+      var button = form.querySelector('button[type="submit"]');
+      var originalText = button.textContent;
+      var email = form.querySelector('input[type="email"]').value.trim();
+
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error('Submission failed');
+          newsletterBox.style.minHeight = newsletterBox.offsetHeight + 'px';
+          newsletterBox.classList.add('is-leaving');
+          setTimeout(function () {
+            Array.prototype.forEach.call(newsletterBox.children, function (el) { el.hidden = true; });
+            var success = document.createElement('div');
+            success.className = 'footer-newsletter-success';
+            success.setAttribute('role', 'status');
+            var heading = document.createElement('span');
+            heading.className = 'footer-newsletter-label';
+            heading.textContent = 'You are subscribed';
+            var line = document.createElement('p');
+            line.textContent = 'New essays will go to ' + email + '.';
+            success.appendChild(heading);
+            success.appendChild(line);
+            newsletterBox.appendChild(success);
+            newsletterBox.classList.remove('is-leaving');
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () { success.classList.add('is-shown'); });
+            });
+          }, 300);
+        })
+        .catch(function () {
+          button.textContent = 'Try again';
+          button.disabled = false;
+          setTimeout(function () { button.textContent = originalText; }, 3000);
         });
     });
   }

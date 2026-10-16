@@ -220,24 +220,7 @@
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         <button type="submit">Subscribe</button>
       </form>
-      <p class="essay-subscribe__done" hidden>Thank you. You are subscribed.</p>
-      <script>
-        (function () {
-          var f = document.querySelector('.essay-subscribe__form');
-          var done = document.querySelector('.essay-subscribe__done');
-          f.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var btn = f.querySelector('button');
-            btn.disabled = true; btn.textContent = 'Sending...';
-            fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } })
-              .then(function (r) {
-                if (r.ok) { f.hidden = true; done.hidden = false; }
-                else { btn.disabled = false; btn.textContent = 'Subscribe'; }
-              })
-              .catch(function () { btn.disabled = false; btn.textContent = 'Subscribe'; });
-          });
-        })();
-      </script>
+      <p class="essay-subscribe__done" role="status" aria-live="polite" hidden></p>
     </section>
 
     <!-- Author bio: helps readers and search engines connect the essay to its author -->
@@ -357,6 +340,7 @@
   </footer>
   <script src="../../nav.js"></script>
   <script src="../../video.js"></script>
+  <script src="../../subscribe.js"></script>
   <!-- Visitor stats: GoatCounter, cookie-free -->
   <script data-goatcounter="https://chibuzor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 

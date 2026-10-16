@@ -303,9 +303,10 @@
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit">Subscribe</button>
         </form>
-        <p class="essay-subscribe__done" hidden>Thank you. You are subscribed.</p>
+        <p class="essay-subscribe__done" role="status" aria-live="polite" hidden></p>
       </div>
-      <script>
+      <!-- Inline handler replaced by /subscribe.js:
+<script>
         (function () {
           var f = document.querySelector('.essay-subscribe--wide .essay-subscribe__form');
           var done = document.querySelector('.essay-subscribe--wide .essay-subscribe__done');
@@ -322,6 +323,7 @@
           });
         })();
       </script>
+      -->
     </div>
   </section>
 
@@ -743,6 +745,7 @@
 
   <script src="nav.js"></script>
   <script src="video.js"></script>
+  <script src="subscribe.js"></script>
 
   <!-- Visitor stats: GoatCounter, cookie-free -->
   <script data-goatcounter="https://chibuzor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
