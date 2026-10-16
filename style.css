@@ -6286,3 +6286,8 @@ h1.about-intro__lead {
     margin-top: 40px;
   }
 }
+
+/* References list: arrows instead of bullet dots */
+.article-body .article-refs ul { list-style: none; margin-left: 24px; padding-left: 0; }
+.article-body .article-refs ul > li { position: relative; padding-left: 24px; }
+.article-body .article-refs ul > li::before { content: "\2192"; position: absolute; left: 0; top: 0; color: var(--color-secondary); font-family: var(--font-mono); }
