@@ -125,6 +125,7 @@
     <img src="https://substackcdn.com/image/fetch/$s_!Z1-r!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5be33eca-0ebe-4452-9503-bfd73a24bef2_1050x840.jpeg" alt="">
   </div>
 
+
   <!-- Essay: static HTML (not client-rendered) so search engines and LLMs can read it -->
   <main class="article-detail">
     <div class="article-meta">
@@ -134,21 +135,41 @@
     </div>
 
     <h1>Challenger, 1986: Deployment Without Ongoing Governance</h1>
-    <nav class="article-toc" aria-label="Contents">
-      <h2 class="article-toc__heading">Contents</h2>
-      <ol>
-        <li class="article-toc__h3"><a href="#what-deployment-looks-like-without-ongoing-governance">What Deployment Looks Like Without Ongoing Governance.</a></li>
-      </ol>
-    </nav>
 
     <article class="article-body">
+<p><b>TLDR:</b> Challenger launched in 1986 because 24 missions had flown without incident, and past success was treated as proof of future safety. AI governance repeats that mistake when it treats deployment as the finish line. A deployed system needs an owner and ongoing monitoring for as long as it runs.</p>
+<figure class="article-cover-mobile"><img src="https://substackcdn.com/image/fetch/$s_!Z1-r!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5be33eca-0ebe-4452-9503-bfd73a24bef2_1050x840.jpeg" alt="" loading="lazy"></figure>
+<p><b>Table of Contents</b></p>
+<ol>
+<li>
+<p><a href="#the-one-time-audit-problem">The One-Time Audit Problem</a></p></li>
+<li>
+<p><a href="#what-deployment-looks-like-without-ongoing-governance">What Deployment Looks Like Without Ongoing Governance.</a></p></li>
+<li>
+<p><a href="#the-incentive-problem">The Incentive Problem</a></p></li>
+<li>
+<p><a href="#what-continuous-governance-actually-requires">What Continuous Governance Actually Requires</a></p></li>
+<li>
+<p><a href="#the-real-risk">The Real Risk</a></p></li>
+</ol>
 <p>In 1986, NASA launched the Space Shuttle Challenger on a morning when the temperature at Cape Canaveral had dropped to 28 degrees Fahrenheit. The O-rings sealing the solid rocket boosters had never been tested at that temperature. Engineers at Morton Thiokol, the contractor responsible, raised the concern the night before launch. They were overruled.</p>
 <p>The decision to launch was made by people who had seen the system work many times before and concluded that prior success was sufficient evidence of future safety. The shuttle had flown 24 missions without incident. The governance framework said: if it worked before, it is approved to fly again.</p>
 <img src="https://substackcdn.com/image/fetch/$s_!6Cjb!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F54f992d8-61fe-42f0-9b81-b5d4e94063ec_436x234.webp" alt="" loading="lazy">
 <p>Seventy-three seconds after launch, Challenger broke apart.</p>
 <p>The failure was not in the design. It was in the assumption that a system, once validated, remains valid regardless of changing conditions.</p>
 <p>AI governance is making the same assumption at scale.</p>
-<p><b>The One-Time Audit Problem</b></p>
+<h4 id="quick-definition-of-terms">Quick definition of terms</h4>
+<ul>
+<li>
+<p><b>AI governance</b> is the set of roles, rules and processes that decide how an AI system is built, deployed and checked.</p></li>
+<li>
+<p><b>Audit</b> is a review of a system at one point in time.</p></li>
+<li>
+<p><b>Drift</b> is when the data or conditions a deployed model meets move away from those it was validated on.</p></li>
+<li>
+<p><b>Post-deployment monitoring</b> is ongoing tracking of how a live system behaves, with a named owner who acts on what it finds.</p></li>
+</ul>
+<p id="the-one-time-audit-problem"><b>The One-Time Audit Problem</b></p>
 <p>Most organizations that deploy AI systems treat governance as a pre-deployment activity. You evaluate the model, test for bias, document the outputs, satisfy the regulatory checklist, and ship. After that, the system runs. The world changes around it. The model does not.</p>
 <p>Compliance teams are brought in after deployment rather than before, and when tough questions surface, ownership is often unclear. That pattern describes organizations that at least have compliance teams. Many do not. <a href="https://ajithp.com/2025/12/14/enterprise-ai-governance-framework/">Ajithp</a></p>
 <p>According to McKinsey’s 2024 State of AI, 72% of enterprises have AI systems in production, but only 9% describe their AI governance as mature. The gap between those two numbers is where things break.</p>
@@ -160,18 +181,18 @@
 <p>Air Canada’s defense was, in effect, that the chatbot was a separate entity responsible for its own outputs. The Tribunal described this as a remarkable submission.</p>
 <p>What is actually remarkable is that the chatbot had been running with incorrect information, and nobody in the governance chain had caught it. The system was deployed, the audit was done, and the assumption was that the work was finished. It was not. The chatbot kept talking to customers. The policy information it carried kept being wrong.</p>
 <p>This is a small case involving a few hundred dollars. The structural problem it illustrates is not small at all.</p>
-<p><b>The Incentive Problem</b></p>
+<p id="the-incentive-problem"><b>The Incentive Problem</b></p>
 <p>The reason ongoing governance is rare is straightforward. CIOs get measured on deployment velocity, not governance maturity. Shipping AI features moves quarterly metrics, but building governance infrastructure does not.</p>
 <p>Organizations track what gets them credited. Deploying a model gets credited. Monitoring it after deployment does not appear on any metric that determines budgets or performance reviews. So monitoring happens inconsistently, if at all.</p>
 <p>Current frontier AI regulations primarily focus on systems deployed to external users, where deployment is more visible and subject to outside scrutiny. High-stakes applications that occur internally, where companies deploy systems within their own organizations to automate R&amp;D, accelerate critical business processes, and handle sensitive proprietary data, face three specific gaps: scope ambiguity that allows internal systems to evade regulatory obligations, point-in-time compliance assessments that fail to capture the continuous evolution of internal systems, and information asymmetries that subvert regulatory awareness and oversight. Litigate</p>
 <p>Point-in-time compliance is the Challenger problem restated. The system passed the test at launch. What happens after launch is a different question, and the current governance architecture largely does not ask it.</p>
-<p><b>What Continuous Governance Actually Requires</b></p>
+<p id="what-continuous-governance-actually-requires"><b>What Continuous Governance Actually Requires</b></p>
 <p>The aviation industry figured this out the hard way. Aircraft are not certified once and flown indefinitely. They go through mandatory maintenance cycles, inspection requirements, and airworthiness directives that update the operating parameters when new information emerges. A fleet-wide safety concern discovered after deployment triggers a review of every aircraft in the fleet, regardless of whether any individual plane has shown a problem.</p>
 <p>That architecture exists because the consequences of failure are immediate and visible. An aircraft that goes down produces evidence. The governance system is designed around that evidence loop.</p>
 <p>AI failures are often neither immediate nor visible. A model that drifts produces outputs that are subtly wrong. Decisions made on those outputs produce outcomes that are hard to trace back to the model. The harm is distributed, delayed, and mediated through other systems. By the time it becomes visible, the causal chain is difficult to reconstruct.</p>
 <p>This is why the governance architecture for AI cannot be built around visible failure events. It has to be built around continuous monitoring of the conditions that predict failure before it becomes visible.</p>
 <p>That means tracking whether training data still represents the population the model is serving. It means monitoring output distributions for drift from baseline. It means having a defined owner for each deployed system whose responsibility does not end at launch. It means building the review cycle into the operational budget rather than treating it as an optional overhead cost.</p>
-<p><b>The Real Risk</b></p>
+<p id="the-real-risk"><b>The Real Risk</b></p>
 <p>The conversation about AI risk is mostly about what a model might do at the moment it is deployed. The bias it might encode, the outputs it might generate, the decisions it might influence.</p>
 <p>That conversation is worth having. But it is happening at the wrong point in the timeline.</p>
 <p>The Air Canada chatbot was not dangerous at launch. It became a liability over time, as the gap between what it said and what the policy actually was went undetected and uncorrected. The Challenger O-rings were not dangerous at the moment they were installed. They became dangerous when the operating conditions moved outside the range in which they had been validated, and nobody in the governance chain caught the discrepancy before it mattered.</p>
